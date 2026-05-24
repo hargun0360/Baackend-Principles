@@ -1,0 +1,1982 @@
+Question A large e-commerce company is experiencing rapid growth in order volume. They need a reliable, scalable, and costeffective solution to process orders asynchronously. The order processing system consists of multiple microservices that need to
+communicate efficiently. Which AWS service would be most suitable for decoupling the order processing microservices and ensuring
+reliable message delivery?
+Option A Amazon SNS
+Option B Amazon SQS
+Option C Amazon Kinesis Data Firehose
+Option D Amazon DynamoDB
+Correct Answer b
+Question A leading financial institute is migrating its on-premises infrastructure to AWS. They want to set up a secure and scalable
+Virtual Private Cloud (VPC) architecture to host their web applications, databases, and other internal services. They need to ensure
+that their web applications are accessible to the public while keeping their databases and internal services private and secure. Which
+of the following VPC architecture best suits the requirement?
+Option A All instances, including web servers and databases, are launched in this public subnet and security groups are configured to
+allow public access to all instances
+Option B Create a VPC with public subnet for web servers and private subnet for databases. Also configure NAT gateway in the public
+subnet to allow instances in the private subnet to access the internet for software updates and patches
+Option C Creates a VPC with a single public subnet and an internet gateway. All instances, including web servers, databases, and
+internal services, are launched in this public subnet.
+Option D Create VPC with multiple availability zones, each containing a public and a private subnet. Deploy web servers in public
+subnets across different availability zones for high availability and deploy databases in private subnets
+Correct Answer b
+Question
+DVD Ltd. is setting up a new application on AWS that includes an application server, and a database server. The architecture requires
+configuring security groups and route tables correctly to meet the following requirements.:
+• The application server should only accept traffic on port 8080.
+• The database server should only accept traffic from the application server on port 3306 (MySQL).
+Which of the following configurations best meets DVD Ltd.'s requirements?
+Option A Configure the security group for the application server to allow inbound traffic on port 8080 and configure the security group
+for the database server to allow inbound traffic on port 3306 from the application server's security group.
+Option B Place all servers in a single public subnet and use a single route table for the entire VPC.
+Option C Configure the security group for the application server to allow inbound traffic on port 8080 from anywhere and configure the
+security group for the database server to allow inbound traffic on port 3306 from anywhere.
+Option D Set up a public subnet for the application server and private subnets for the database servers with an internet gateway
+attached to the public subnet.
+Correct Answer a
+Question Assume you are working as an Architect in a media content creation company. You have a project where a network file
+system should be mounted on Linux instances. The files will be regularly accessed and stored at first, and then less often. Which is
+the most cost-effective option?
+Option A Amazon S3 Intelligent Tiering
+Option B Amazon FSx for Lustre
+Option C Amazon EFS Infrequent Access
+Option D Amazon S3 Glacier Deep Archive
+Correct Answer c
+Question A company needs to migrate a large on-premises data warehouse to the cloud for improved scalability and cost efficiency.
+The data is primarily used for analytical workloads and requires fast query performance on petabyte-scale data. Which AWS database
+service would be the best option for this migration, considering the need for petabyte-scale data warehousing and fast query
+performance?
+Option A Amazon Aurora, offering high availability and performance for OLTP workloads.
+Option B Amazon DynamoDB, designed for low latency and high throughput for operational workloads.
+Option C Amazon RDS for PostgreSQL, providing a relational database with advanced features.
+Option D Amazon Redshift, optimized for petabyte-scale data warehousing and ad-hoc analytics.
+Correct Answer d
+Question
+A Solutions Architect is designing a web application. The web and application tiers need to access the Internet, but they cannot be
+accessed from the Internet. Which of the following steps is required?
+Option A
+Attach an Elastic IP address to each Amazon EC2 instance and add a route from the private subnet to the public subnet.
+Option B
+Launch a NAT gateway in the public subnet and add a route to it from the private subnet.
+Option C
+Launch Amazon EC2 instances in the public subnet and change the security group to allow outbound traffic on port 80.
+Option D
+Launch a NAT gateway in the private subnet and deploy a NAT instance in the private subnet.
+Correct Answer d
+Question A company is migrating its IT infrastructure to AWS from an on-premises data center. They require a gradual cutover
+process with minimal downtime. Which failover strategy would be suitable for a gradual migration to AWS?
+Option A Manual failover
+Option B Automatic failover
+Option C Pilot light
+Option D Warm standby
+Correct Answer c
+Question A company hosts an application on an Amazon EC2 instance that requires a maximum of 200 GB storage space. The
+application is used infrequently, with peaks during mornings and evenings. Disk I/O varies, but peaks at 3,000 IOPS. The chief
+financial officer of the company is concerned about costs and has asked a solutions architect to recommend the most cost-effective
+storage option that does not sacrifice performance. Which solution should the solutions architect recommend?
+Option A Amazon Elastic Block Store (Amazon EBS) Cold HDD (sc1)
+Option B Amazon Elastic Block Store (Amazon EBS) General Purpose SSD (gp2)
+Option C Amazon Elastic Block Store (Amazon EBS) Provisioned IOPS SSD (io1)
+Option D Amazon Elastic Block Store (Amazon EBS) Throughput Optimized HDD (st1)
+Correct Answer b
+Question
+Which of the following statement for AWS IAM service is incorrect?
+Option A
+IAM supports the processing, storage, and transmission of credit card data by a merchant or service provider, and has been validated
+as being PCI DSS compliant
+Option B
+Changes made to IAM would be eventually consistent and hence would take some time to reflect
+Option C
+IAM provide STS which is an included feature of the AWS account offered at an additional charge.
+Option D
+IAM User cannot be renamed from AWS management console and has to be done from CLI or SDK tools.
+Correct Answer c
+Question
+An organization is planning to extend their data center by connecting their DC with the AWS VPC using the VPN gateway. The
+organization is setting up a dynamically routed VPN connection. Which of the below mentioned answers is not required to setup this
+configuration?
+Option A
+The type of customer gateway, such as Cisco ASA, Juniper J-Series, Juniper SSG, Yamaha.
+Option B
+Elastic IP ranges that the organization wants to advertise over the VPN connection to the VPC.
+Option C
+Internet-routable IP address (static) of the customer gateway's external interface.
+Option D
+Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the customer gateway
+Correct Answer b
+Question A mobile application for food delivery needs to handle many concurrent users, process orders efficiently, and integrate with
+multiple third-party services (e.g., payment gateways, delivery services). How can AWS API Gateway be used to improve the overall
+efficiency and scalability of the food delivery application?
+Option A By using API Gateway's integration with Lambda for order processing and real-time updates.
+Option B By leveraging API Gateway's caching to improve response times for menu and restaurant data.
+Option C By utilizing API Gateway's integration with AWS Step Functions for complex order workflows.
+Option D All of the above.
+Correct Answer d
+Question A solutions architect observes that a nightly batch processing job is automatically scaled up for 2 hours before the desired
+Amazon EC2 capacity is reached. The peak capacity is the same every night and the batch jobs always start at 8pm. The solutions
+architect needs to find a cost-effective solution that will allow for the desired EC2 capacity to be reached quickly and allow the Auto
+Scaling group to scale down after the batch jobs are completed. What should the solutions architect do to meet the stated
+requirements?
+Option A Increase the minimum capacity to 2 instances for the Auto Scaling group.
+Option B Increase the maximum to 10 instances for the Auto Scaling group.
+Option C Configure scheduled scaling to scale up to the desired compute level.
+Option D Change the targeted scaling policy based on Avg CPU utilization to add more EC2 instances during each scaling operation.
+Correct Answer c
+Question A company is deploying a mission-critical application on AWS. They want to ensure the highest level of fault tolerance.
+Which of the following deployment strategies is most appropriate and cost effective?
+Option A Deploy all instances in a single Availability Zone.
+Option B Deploy instances across multiple Availability Zones within the same Region load balanced by an application load balancer
+Option C Deploy instances across multiple Regions. load balanced by Route53
+Option D There is no difference, any deployment strategy offers the same level of fault tolerance.
+Correct Answer b
+Question
+www.dropbag.com is a website where you have file sharing and storing services like Google Drive and Google Dropbox. During the
+sync up from desktop you accidently deleted an important file. Which of the simple storage service will help you retrieve the deleted
+file?
+Option A
+Versioning in S3
+Option B
+Secured signed URLs for S3 data access
+Option C
+Don't allow delete objects from S3
+Option D
+S3 Reduced Redundancy Storage
+Correct Answer a
+Question A company is deploying a new application to AWS EC2 instance that requires programmatic access to S3 buckets. The
+developers currently use their own IAM user credentials within the application code. What is the most secure way to manage access
+for this application?
+Option A Continue using the developers IAM user credentials.
+Option B Create a single IAM user with programmatic access and get the access id, secret access key shared to all the developers to
+access all applications.
+Option C Create an IAM role for S3 bucket access and attach the role to the EC2 instance where the application is deployed
+Option D Enable Multi-Factor Authentication (MFA) for the developers who access te s3 bucket using the IAM Account.
+Correct Answer c
+Question
+Martha is a solution architect who has been assigned a task to evaluate existing AWS infrastructure and suggest improvements. While
+going through the configuration, she could see a particular application hosted in Web Servers in an Auto Scaling group, with an Elastic
+Load Balancer in-front of them, in us-west-2 (Oregon) region. She could observe 10 webservers up and running in the availability
+Zone(AZ) us-west-2a, where-as no instances running in other AZs. How can she fix the issue quickly to design proper load balancing
+between AZs?
+Option A
+Create another ELB and add it to a second AZ
+Option B
+Select the minimum size of Auto Scaling group equal to the number of Availability Zones
+Option C
+Using copy AMI option, copy the AMI to other AZs also and then instances will be created in other regions
+Option D
+Modify the Auto-scaling configuration to launch in all AZs within the region
+Correct Answer d
+Question A US-based retail company with an on-premises web application is looking to expand its foot print to the Asian market. How
+can they significantly improve web application load times for new Asian users without migrating the backend and implementing a
+solution quickly . As a Solution Architect, which of the following option will you recommend?
+Option A Migrate website to Amazon S3 with cross-region replication.
+Option B Utilize Amazon CloudFront with a custom origin pointing to on-premises servers.
+Option C Implement Route 53 geo-proximity routing to on-premises servers.
+Option D Use Amazon CloudFront with a custom origin pointing to the website's DNS record on Route 53.
+Correct Answer b
+Question
+An enterprise has hosted its workload in AWS with the front end using Autoscaling and Load balancing. The Relational Database
+service is used as back-end. However, the database is not responding occasionally due to heavy traffic. It was observed that the
+traffic is read heavy. How to optimize the architecture to meet the requirements?
+Option A
+Modify the RDS and upgrade to larger instance type
+Option B
+Create a read replica in a different Availability Zone to handle the read traffic
+Option C
+Add a Cache layer in front of the RDS instance using ElastiCache
+Option D
+Create a Secondary DB in a different Availability Zone to handle the read traffic
+Correct Answer b
+Question A leading online stock brokerage company is expanding its presence across the globe by leveraging the usage of AWS and
+wants to enhance its security posture by implementing robust threat detection and data protection measures. They need to: • Detect
+and respond to potential security threats and unusual activity within their AWS environment. • Identify and protect sensitive data, such
+as personally identifiable information (PII) and financial records. Which of the following recommendations would meet the stated
+security requirements?
+Option A Use Amazon GuardDuty to identify and classify sensitive data and use Amazon Macie to monitor and detect potential
+security threats and unusual activity within the AWS environment.
+Option B Use AWS Secrets Manager to encrypt sensitive data at rest and in transit, and use Amazon Macie to manage user
+authentication and access control
+Option C Use Amazon Cognito to perform regular vulnerability assessments on AWS resources, and use Amazon Macie to provide
+real-time threat detection and response.
+Option D Use Amazon GuardDuty to monitor and detect potential security threats and unusual activity within the AWS environment,
+and use Amazon Macie to identify and classify sensitive data such as PII and financial records.
+Correct Answer d
+Question You have a set of EC2 Instances in a custom VPC. You have installed a web application and need to ensure that only
+HTTP and HTTPS traffic is allowed into the instance. Which of the following would you consider for this requirement?
+Option A Add a security group rule to allow HTTP and HTTPS Traffic.
+Option B Add a security group rule to an explicit DENY all traffic and a default allow on HTTP and HTTPS Traffic.
+Option C Add a security group rule to deny explicit traffic on HTTP and HTTPS Traffic
+Option D Add a security group rule to allow all traffic.
+Correct Answer a
+Question
+A customer relationship management (CRM) application runs on Amazon EC2 instances in multiple Availability Zones behind an
+Application Load Balancer. If one of these instances fails, what occurs?
+Option A
+The load balancer will stop sending requests to the failed instance.
+Option B
+The load balancer will terminate the failed instance.
+Option C
+The load balancer will automatically replace the failed instance.
+Option D
+The load balancer will return 504 Gateway Timeout errors until the instance is replaced.
+Correct Answer a
+Question Your servers as an e-sports tournament organizer must be highly available and scalable. As a result, you have set up three
+Availability Zones (AZs) for Elastic Load Balancing (ELB) and Auto Scaling groups (ASG). The servers must scale swiftly during esports competitions. Additionally, the servers may be idle once a tournament is over. Generally speaking, you want to be able to scale,
+be highly available, and minimize your expenses. What would you suggest? (Pick two)
+Option A Use Dedicated hosts for the minimum capacity
+Option B Set the minimum capacity to 1
+Option C Set the minimum capacity to 2
+Option D Use Reserved Instances (RIs) for the minimum capacity
+Correct Answer cd
+Question A financial services company is looking for a simple method to connect its multiple VPCs in AWS Platform with on-premises
+networks through a centralized hub. As a Solution Architect, which of the below AWS networking solution will have least operational
+overhead?
+Option A AWS Elastic Load Balancing
+Option B Fully Meshed VPC Peering
+Option C AWS Transit Gateway
+Option D Partially Meshed VPC Peering
+Correct Answer c
+Question
+Which disaster recovery method involves running your site in AWS and on your existing on-site infrastructure in an active-active
+configuration?
+Option A
+Multi-site solution
+Option B
+Active-passive solution
+Option C
+Pilot light
+Option D
+Warm standby solution
+Correct Answer a
+Question Your organization has experienced a data breach where sensitive customer information was exposed. To prevent future
+incidents and ensure compliance with data privacy regulations, you need to implement robust data access and governance controls.
+Which of the following approaches would be most effective?
+Option A Conduct regular security audits and rely on employee training to prevent unauthorized access.
+Option B Implement granular access controls using IAM roles and policies and conduct regular data loss prevention (DLP) scans.
+Option C Encrypt all sensitive data and limit access to authorized personnel only.
+Option D Isolate sensitive data in a secure environment and restrict network access.
+Correct Answer b
+Question You are building a real-time data processing pipeline to analyze customer behavior on your e-commerce platform. The
+pipeline involves capturing user events, processing them and storing data insights in a data warehouse for further analysis. Given the
+requirement for low latency processing of user events, high throughput, and the ability to scale independently, which AWS tools
+should you use to efficiently manage and move data through your processing system?
+Option A Amazon SQS and Amazon Kinesis Data Firehose
+Option B Amazon SNS and Amazon Kinesis Data Analytics
+Option C Amazon SQS and Amazon Managed Streaming for Apache Kafka (MSK)
+Option D Amazon SNS and Amazon Kinesis Data Streams
+Correct Answer c
+Question A large e-commerce company is experiencing rapid growth in sales and product catalogue listings and the company plans
+to maintain separate catalogue based on Geos such as APAC, Europe, Americas.The company's current database infrastructure is
+struggling to handle the increased load, leading to performance issues and data inconsistencies. Given these challenges, which AWS
+database service would be most suitable for handling the company's high-volume, low-latency data processing and storage needs,
+while also providing scalability and high availability?
+Option A Amazon RDS for MySQL with Multi-AZ deployment
+Option B Amazon DynamoDB with global secondary indexes
+Option C Amazon Redshift for data warehousing and analytics
+Option D Amazon Aurora for high-performance transactional workloads
+Correct Answer b
+Question
+A Solutions Architect is designing a solution that will include a database in Amazon RDS. Corporate security policy mandates that the
+database, its logs, and its backups are all encrypted. Which is the MOST efficient option to fulfill the security policy using Amazon
+RDS?
+Option A
+Launch an Amazon RDS instance with encryption enabled. Enable encryption for logs and backups.
+Option B
+Launch an Amazon RDS instance. Enable encryption for database, logs and backups.
+Option C
+Launch an Amazon RDS instance with encryption enabled. Logs and backups are automatically encrypted.
+Option D
+Launch an Amazon RDS instance. Enable encryption for backups. Encrypt logs with a database-engine feature.
+Correct Answer d
+Question A gaming company is developing a real-time multiplayer game that requires extremely low latency access to player data,
+game state, and leaderboards. The data is frequently updated and accessed by many concurrent users. Which AWS database service
+would be most suitable for this scenario, considering the need for high performance, low latency, and ability to handle massive scale?
+Option A Amazon Aurora, due to its high availability and performance capabilities.
+Option B Amazon DynamoDB, offering fast and predictable performance with automatic scaling.
+Option C Amazon RDS for MySQL, providing familiar relational database features and high availability.
+Option D Amazon Redshift, designed for petabyte-scale data warehousing and analytics.
+Correct Answer b
+Question
+Peter is an AWS Network admin and is working with a VPC with CIDR 10.0.0.0/16 which can communicate with 10.1.0.0/16 corporate
+network. Which of the connections would be dropped if it tries to connect?
+Option A
+10.0.37.0/16 corporate network
+Option B
+10.0.2.0/16 corporate network
+Option C
+10.0.37.0/16 VPC network
+Option D
+10.0.2.0/16 VPC network
+Correct Answer a
+Question A database instance supporting an e-commerce application is showing signs of performance degradation during peak load.
+The company’s database, hosted on an Amazon RDS for MySQL instance with a Multi-AZ deployment, is identified as the primary
+bottleneck. Which of the following actions would improve database performance without incurring significant additional costs?
+Option A Increase the provisioned IOPS for the database storage.
+Option B Enable database caching to reduce latency.
+Option C Add read replicas to offload read traffic.
+Option D Upgrade the database instance type to a larger size.
+Correct Answer b
+Question
+An application stack includes an Elastic Load Balancer in a public subnet, a fleet of Amazon EC2 instances in an Auto Scaling group,
+and an Amazon RDS MySQL cluster. Users connect to the application from the Internet. The application servers and database must
+be secure.
+How should a Solutions Architect perform this task?
+Option A
+Create a private subnet for the Amazon EC2 instances and a public subnet for the Amazon RDS cluster.
+Option B
+Create a private subnet for the Amazon EC2 instances and a private subnet for the Amazon RDS cluster.
+Option C
+Create a public subnet for the Amazon EC2 instances and a private subnet for the Amazon RDS cluster.
+Option D
+Create a public subnet for the Amazon EC2 instances and a public subnet for the Amazon RDS cluster.
+Correct Answer c
+Question Your company is building a large-scale data analytics platform that requires storing and processing large amounts of data
+from various sources. Which AWS storage service would be most suitable for storing raw, unstructured data such as log files and
+sensor data for long-term retention and cost-effective analysis?
+Option A Amazon EBS
+Option B Amazon S3
+Option C Amazon FSx
+Option D Amazon EFS
+Correct Answer b
+Question You are working as a lead for a development team. Your team members looking for a solution to proivde access to multiple
+IAM users and want to set policies for an application. How can you securely grant them access while adhering to the least privilege?
+Option A Assign the developers the root user credentials for full access.
+Option B Create an IAM user for each developer with the Administrator policy attached.
+Option C Create an IAM user group for developers and attach a custom policy with the minimum permissions required for managing
+IAM users and policies
+Option D Grant the developers access to a pre-defined IAM user with full IAM permissions.
+Correct Answer c
+Question
+You have a content management system running on an Amazon EC2 instance that is approaching 100% CPU utilization. Which
+option will reduce load on the Amazon EC2 instance?
+Option A
+Create a load balancer, and register the Amazon EC2 instance with it
+Option B
+Create a CloudFront distribution, and configure the Amazon EC2 instance as the origin
+Option C
+Create an Auto Scaling group from the instance using the CreateAutoScalingGroup action
+Option D
+Create a launch configuration from the instance using the CreateLaunchConfiguration action
+Correct Answer b
+Question An e-commerce platform is experiencing slow load times due to large image sizes. They want to improve website
+performance and user experience by dynamically resizing images based on the user's device screen size. Which AWS services would
+you recommend to implement this image resizing solution?
+Option A S3, EC2, Nginx, CloudFront
+Option B S3, Lambda, API Gateway, CloudFront
+Option C S3, Elastic Beanstalk, RDS, CloudFront
+Option D S3, EMR, Redshift, CloudFront
+Correct Answer b
+Question Currently, four Amazon EC2 instances that are deployed in a single Availability Zone (AZ) are hosting an application
+(behind an Application Load Balancer). To ensure a satisfactory end-user experience, the application must have a minimum of 4
+instances that are constantly online. As a Cloud Architect, which of the following actions you would suggest to ensure that the
+application achieves high availability at the lowest possible cost?
+Option A Create an Auto scaling group configuration which spread across 3 AZ's with minimum, desired instances set to 3 and max
+instances set to 4
+Option B Create an Auto scaling group configuration which spread across 3 AZ's with minimum, desired instances set to 2 and max
+instances set to 4
+Option C Create an Auto scaling group configuration which spread across 3 AZ's with minimum, desired instances set to 1 and max
+instances set to 4
+Option D Create an Auto scaling group configuration which spread across 3 AZ's with minimum, desired instances set to 4 and max
+instances set to 6
+Correct Answer d
+Question A Space Exploration company that processes satellite images has an application that runs on AWS. The company stores
+the images in an Amazon S3 bucket. For compliance reasons, the company must replicate all data once a month to an on-premises
+location. The average amount of data that the company needs to transfer is 60 TB. What is the MOST cost-effective way to transfer
+this data from S3 to onpremises?
+Option A Export the data monthly from the existing S3 bucket to an AWS Snowball Edge storage optimized device. Ship the device to
+the on-premises location. Transfer the data. Return the device a week later.
+Option B Use S3 bucket replication to copy all objects to a new S3 bucket that uses s3-standard-infrequent access storage. Use an
+AWS Storage Gateway file gateway to transfer the data from the new S3 bucket to the on-premises location.
+Option C Create an Amazon CloudFront distribution for the objects in the existing s3 bucket. Download the objects from CloudFront to
+the on-premises location every month.
+Option D Use S3 bucket replication to copy all objects to a new S3 bucket that uses s3-standard-infrequent access storage. Use
+Amazon S3 to transfer the data from the new S3 bucket to the on-premises location.
+Correct Answer a
+Question You are planning to deploy a new database server on AWS to support your retail shopping cart application. The webapp
+experiences high traffic and minimizing latency between the database and the web servers is crucial for optimal performance. Which
+of the following considerations is MOST important when choosing an AZ for the database server?
+Option A The latency between the database and the webserver instances.
+Option B The availability of specific instance types within the AZ.
+Option C Whether the AZ is located closest to your company's headquarters.
+Option D The current workload of other resources deployed in the AZ
+Correct Answer a
+Question A leading global consumer robot company has a web application which runs on an Amazon EC2 instance hosted in private
+subnet within a VPC. The application should access data from an Amazon S3 bucket without exposing it to the public internet. As an
+Architect, which AWS service you will consider to securely access the S3 bucket from the private subnet without the need for a NAT
+gateway or internet gateway?
+Option A Attach an Instance profile to the EC2 instance which allows S3 access
+Option B Create a gateway VPC endpoint to the S3 bucket
+Option C Define an API with a private link to access the S3 endpoint
+Option D Only AWS Direct Connect can be used to access the data present in S3 bucket
+Correct Answer b
+Question A trusted news organization uses a serverless architecture to process events for its analytics service. When multiple events
+trigger the same function simultaneously, how does AWS Lambda manage these concurrent executions?
+Option A Each concurrent execution shares the same function code and environment.
+Option B Concurrent executions are limited to a single instance of the function.
+Option C Concurrent executions are not supported by AWS Lambda.
+Option D Each concurrent execution has its own isolated function code and environment.
+Correct Answer d
+Question You are working on migrating some of the workloads in your project to the AWS cloud. You need to design a cost-optimized
+network architecture to connect your on-premises data center to AWS and ensure data security and compliance during the migration
+process. As a Cloud Architect which AWS service can be considered for this requirement?
+Option A AWS Network Firewall
+Option B AWS CloudTrail
+Option C AWS Config
+Option D AWS IAM
+Correct Answer a
+Question
+Here are some security measures you have implemented for your application:
+1) Launched EC2 instances within a VPC
+2) Created an IAM user with limited permissions
+3) Implemented security groups to restrict access.
+Which of the following security best practices falls outside the scope of your responsibility according to the shared responsibility
+model?
+Option A Patching the operating system of your EC2 instances to address security vulnerabilities.
+Option B Ensuring the physical security of AWS data centers.
+Option C Encrypting data at rest within your S3 buckets.
+Option D Implementing DDoS protection for your application.
+Correct Answer b
+Question A Hollywood production company is organizing several publicity activities to before the release of the teaser for its
+upcoming science fiction movie. The studio executives want to make a static website that features a ton of animations that fit the
+movie's theme. As a solutions architect, the studio has recruited you to develop a serverless solution that is scalable. Out of all the
+options, which one is the most economical and effective solution?
+Option A Host the website on an instance in the studio's on-premises data center. Create an Amazon CloudFront distribution with this
+instance as the custom origin
+Option B Build the website as a static website hosted on Amazon S3. Create an Amazon CloudFront distribution with Amazon S3 as
+the origin. Use Amazon Route 53 to create an alias record that points to your Amazon CloudFront distribution
+Option C Host the website on an Amazon EC2 instance. Create a Amazon CloudFront distribution with the Amazon EC2 instance as
+the custom origin
+Option D Host the website on AWS Lambda. Create an Amazon CloudFront distribution with Lambda as the origin
+Correct Answer b
+Question You are tasked with developing a web application that will experience high levels of user traffic. The application comprises a
+complex backend system and a user-facing frontend. You want to ensure that the frontend can scale independently of the backend to
+handle sudden traffic spikes. Which AWS services would you use to decouple the frontend and backend, enabling independent
+scaling?
+Option A Amazon EC2, Elastic Load Balancing, and Amazon RDS
+Option B Amazon API Gateway, AWS Lambda, and Amazon DynamoDB
+Option C Amazon EC2, Application Load Balancer, and Amazon ElastiCache
+Option D Amazon S3, CloudFront, and Amazon EC2
+Correct Answer b
+Question
+You are building a system to distribute confidential training videos to employees. Using CloudFront, what method could be used to
+serve content that is stored in S3, but not publically accessible from S3 directly?
+Option A
+Create an Origin Access Identity (OAI) for CloudFront and grant access to the objects in your S3 bucket to that OAI.
+Option B
+Add the CloudFront account security group “amazon-cf/amazon-cf-sg” to the appropriate S3 bucket policy.
+Option C
+Create an Identity and Access Management (IAM) User for CloudFront and grant access to the objects in your S3 bucket to that IAM
+User.
+Option D
+Create a S3 bucket policy that lists the CloudFront distribution ID as the Principal and the target bucket as the Amazon Resource
+Name (ARN).
+Correct Answer a
+Question
+You need a solution to distribute traffic evenly across all of the containers for a task running on Amazon ECS. Your task definitions
+define dynamic host port mapping for your containers. What AWS feature provides this functionally?
+Option A
+Application Load Balancers support dynamic host port mapping
+Option B
+CloudFront custom origins support dynamic host port mapping
+Option C
+All Elastic Load Balancing instances support dynamic host port mapping
+Option D
+Classic Load Balancers support dynamic host port mapping
+Correct Answer a
+Question A rapidly growing e-commerce company is experiencing exponential growth in sales and website traffic. The company
+wants to transform and clean the ingested data before loading it into a data warehouse for analytics. Also, they want to monitor log
+files from CloudTrail or Cloudwatch and scan the logs for specific events or log entries. Which of the below two AWS services can be
+used for these use cases to be implemented?
+Option A Amazon EMR (Elastic Map Reduce), Apache Spark
+Option B Amazon Glue, AWS Lambda
+Option C Amazon Redshift, Amazon S3
+Option D Amazon Kinesis Data Analytics, Amazon DynamoDB
+Correct Answer b
+Question You have a large number of servers generating log files. You need to analyze these logs in real-time to detect anomalies,
+security threats, and performance issues. Which of the following database solutions is best suited for handling such large volumes of
+unstructured data?
+Option A Amazon DynamoDB
+Option B Amazon RDS for MySQL
+Option C Amazon Redshift
+Option D Amazon ElastiCache
+Correct Answer a
+Question Your organization has a sensitive database hosted on Amazon RDS that requires robust encryption at rest. You have
+decided to use AWS KMS to manage the encryption keys for this database. Which of the following options is the most appropriate
+approach to protect the database encryption key while ensuring optimal performance and security?
+Option A Use a customer-managed KMS key with a rotation schedule of every 90 days.
+Option B Use an AWS-managed KMS key with default key policy settings.
+Option C Use a customer-managed KMS key without any rotation schedule.
+Option D Use a customer-managed KMS key with a rotation schedule of every 7 days.
+Correct Answer a
+Question
+A user has created a VPC with public and private subnets using the VPC wizard. The VPC has CIDR 20.0.0.0/16. The private subnet
+uses CIDR 20.0.0.0/24 . The NAT instance ID is i-a12345. Which of the below mentioned entries are required in the main route table
+attached with the private subnet to allow instances to connect with the internet?
+Option A
+Destination: 0.0.0.0/0 and Target: i-a12345
+Option B
+Destination: 20.0.0.0/0 and Target: 80
+Option C
+Destination: 20.0.0.0/0 and Target: i-a12345
+Option D
+Destination: 20.0.0.0/24 and Target: i-a12345
+Correct Answer a
+Question You are designing a highly scalable, fault-tolerant application on AWS that processes large volumes of real-time data using
+Amazon Kinesis Data Streams. To ensure optimal performance and prevent service disruptions due to quota limitations, you
+implement a comprehensive quota management strategy. Which of the following options most effectively combines AWS services and
+best practices to proactively monitor, forecast, and manage Kinesis Data Streams quotas, considering factors such as burstable
+capacity, quota types, and potential scaling events?
+Option A Utilize Amazon CloudWatch Metrics and Alarms to monitor Kinesis Data Stream metrics, set up custom metrics for burstable
+capacity, and manually request quota increases when thresholds are breached.
+Option B Implement Amazon CloudWatch Events to trigger AWS Lambda functions based on Kinesis Data Stream metrics. Use AWS
+Step Functions to orchestrate quota increase requests, leveraging Amazon DynamoDB for state management and historical data.
+Option C Employ Amazon Kinesis Data Analytics to process Kinesis Data Stream data, calculate moving averages of key metrics, and
+use Amazon Machine Learning to forecast future quota usage. Integrate with AWS Service Quotas to automatically request quota
+increases based on forecast data.
+Option D Combine Amazon CloudWatch, Amazon Kinesis Data Analytics, and AWS Lambda to create a real-time monitoring and
+forecasting pipeline. Use Amazon SNS to send alerts and Amazon SQS to queue quota increase requests, ensuring reliability and
+scalability.
+Correct Answer d
+Question An e-commerce platform uses an AWS Lambda function to process image resizing tasks for product images. The function
+experiences significant latency during peak traffic periods due to cold starts. Which approach should the solutions architect
+recommend to effectively reduce cold start time?
+Option A Increase the function's memory allocation.
+Option B Implement a scheduled warm-up function.
+Option C Utilize provisioned concurrency for the function.
+Option D Increase the function's timeout duration.
+Correct Answer c
+Question A large MNC is transitioning its workloads to AWS and wants to centralize identity management for its workforce. They aim
+to manage user access to multiple AWS accounts and applications in a streamlined manner. As a Solution architect you should
+ensure the organization can easily manage user identities and provide single sign-on (SSO) access to various AWS resources. Which
+of the following approaches would meet the stated requirement?
+Option A Set up AWS IAM Identity Center, configure it to use an external identity provider like Google Workspace for SSO, and
+manage user access through the external provider's console
+Option B Set up AWS IAM Identity Center, connect it to the existing on-premises Active Directory using AWS Directory Service, and
+assign permission to users through the IAM Identity Center console
+Option C Create individual IAM users for each employee in each AWS account, set up cross-account roles for access, and use IAM
+Identity Center for managing SSO access
+Option D Use AWS IAM Identity Center to create a new directory within AWS, manually add all user identities, and manage user
+access to AWS resources.
+Correct Answer b
+Question Your company is running a high-traffic online gaming platform on AWS that experiences unpredictable spikes in concurrent
+users during game launches and events. To ensure optimal performance and cost-efficiency, you need to implement a robust scaling
+solution. Which of the following AWS services and features would be suitable for scaling your gaming platform to handle fluctuating
+workloads? Select THREE Options.
+Option A Amazon EC2 Auto Scaling
+Option B Amazon Elastic Load Balancing (ELB)
+Option C Amazon SNS
+Option D Amazon DynamoDB
+Correct Answer abf
+Question
+An analytics company is planning to offer a site analytics service to its users. The service will require that the users webpages include
+a JavaScript script that makes authenticated GET requests to the company's Amazon S3 bucket.
+What must a solutions architect do to ensure that the script will successfully execute?
+Option A
+Enable cross-origin resource sharing (CORS) on the S3 bucket.
+Option B
+Enable S3 versioning on the S3 bucket.
+Option C
+Provide the users with a signed URL for the script.
+Option D
+Configure a bucket policy to allow public execute privileges.
+Correct Answer a
+Question As an Architect, you are tasked with designing a cost-optimized network architecture for a multi-cloud environment for a
+project. To connect your AWS environment to other cloud service providers, which AWS services would you use?
+Option A AWS Direct Connect, AWS VPN, and AWS Transit Gateway
+Option B AWS EC2, S3, and Route 53
+Option C AWS Lambda, API Gateway, and DynamoDB
+Option D AWS SageMaker, Rekognition, and Transcribe
+Correct Answer a
+Question An enterprise is planning to migrate its flagship application from an on-premises environment to AWS to improve scalability,
+performance, and cost-efficiency. The application handles both static and dynamic content. Considering factors such as low latency,
+high availability, and cost-optimization, which of the following AWS architectural approaches would be most suitable for delivering the
+application's static content to a global user base?
+Option A Deploying the application on Amazon EC2 instances behind an Elastic Load Balancer (ELB) in multiple Availability Zones,
+leveraging Amazon S3 for static content storage and serving it directly to users.
+Option B Utilizing Amazon Elastic Beanstalk for application deployment and management, storing static content on Amazon EFS for
+shared access, and distributing content globally using Amazon CloudFront.
+Option C Implementing a serverless architecture using AWS Lambda and API Gateway for dynamic content, storing static content on
+Amazon S3, and leveraging Amazon CloudFront with edge locations for fast content delivery worldwide.
+Option D Creating a hybrid cloud environment with on-premises web servers for static content delivery and AWS for application logic
+and dynamic content processing, using AWS Direct Connect for low-latency connectivity.
+Correct Answer c
+Question
+A Solutions Architect is designing a stateful web application that will run for one year (24/7) and then be decommissioned. Load on
+this platform will be constant, using a number of r4.8xlarge instances. Key drivers for this system include high availability, but elasticity
+is not required.
+What is the MOST cost-effective way to purchase compute for this platform?
+Option A
+Scheduled Reserved Instances
+Option B
+Convertible Reserved Instances
+Option C
+Standard Reserved Instances
+Option D
+Spot Instances
+Correct Answer c
+Question
+A company is developing an online gaming platform with millions of active users.
+Which of the following options helps you to design a cost-optimized network architecture to support the gaming platform which
+ensures security and compliance?
+Option A AWS IAM, KMS, and Network Firewall
+Option B AWS EC2, S3, and Route 53
+Option C AWS Lambda, API Gateway, and DynamoDB
+Option D AWS SageMaker, Rekognition, and Transcribe
+Correct Answer a
+Question A global media streaming platform with a predominantly young, tech-savvy user base relies on a microservices architecture
+deployed across multiple cloud regions. The platform streams a mix of live sports, on-demand movies, and exclusive TV series to
+millions of subscribers worldwide. Given strict data privacy regulations, limited budget, and the potential for cascading failures, which
+DR strategy minimizes downtime while balancing data loss for different content types, considering varying regional audience demands
+and peak usage periods?
+Option A Backup and Restore
+Option B Pilot Light
+Option C Warm Standby
+Option D Active-Active Failover
+Correct Answer c
+Question As a Solutions Architect can you suggest , Which of the following configurations best describes the behavior of an AWS
+Network Access Control List (NACL) associated with a subnet that needs to allow incoming HTTP (port 80) and HTTPS (port 443)
+traffic from any IP address, but deny all other inbound traffic, while allowing all outbound traffic?
+Option A Create an inbound rule allowing traffic on port 80 and 443 from any IP address and create an outbound rule allowing traffic
+on port 80 and port 443 to any IP address. Add a default deny rule for outbound traffic.
+Option B Create an inbound rule allowing traffic on port 80 and port 443 from any IP address. Create an outbound rule allowing all
+traffic from any IP address. NACLs do not require a default deny rule as they are stateful
+Option C Create an inbound rule allowing traffic on port 80 and port 433 from any IP address. NACLs are stateful, so all outbound
+traffic is allowed by default.
+Option D Create an inbound rule allowing traffic on port 80 and port 443 from any IP address. Create an outbound rule allowing all
+traffic from any IP address. Add a default deny rule for inbound traffic.
+Correct Answer d
+Question A healthcare company has deployed its web application on Amazon ECS container instances running behind an Application
+Load Balancer (ALB). The website experiences performance degradation during traffic spikes. The company wants to implement an
+automated solution to scale the application based on real-time metrics. Which feature would you use to automatically scale the ECS
+cluster in response to changes in application load?
+Option A Configure Amazon CloudWatch with custom metrics and alarms, triggering manual scaling actions.
+Option B Configure Amazon ECS Auto Scaling, to scale out the ECS cluster when the ECS service's CPU utilization rises above a
+threshold.
+Option C Configure Amazon ECS Auto Scaling, to scale out the ECS cluster when the ALB target group's CPU utilization rises above
+a threshold.
+Option D Configure Application Load Balancer target group scaling policies, adjusting target group size based on load.
+Correct Answer b
+Question You need to build a function that processes images uploaded to an S3 bucket. The function should be triggered
+automatically, and scale based on incoming images, without the need for managing underlying infrastructure. Which AWS compute
+service is best suited for this use case, considering the requirement for serverless architecture, automatic scaling, and event-driven
+processing?
+Option A AWS Lambda
+Option B Amazon EC2
+Option C AWS Fargate
+Option D Amazon Elastic Beanstalk
+Correct Answer a
+Question An application running on an Amazon EC2 instance in VPC-A needs to access files in another EC2 instance in VPC-B.
+Both are in separate AWS accounts. The network administrator needs to design a solution to configure secure access to EC2
+instance in VPC-B from VPC-A. The connectivity should not have a single point of failure or bandwidth concerns. Which solution will
+meet these requirements?
+Option A Set up a VPC peering connection between VPC-A and VPC-B.
+Option B Set up VPC gateway endpoints for the EC2 instance running in VPC-B.
+Option C Attach a virtual private gateway to VPC-B and set up routing from VPC-A.
+Option D Create a private virtual interface (VIF) for the EC2 instance running in VPC-B and add appropriate routes from VPC-A.
+Correct Answer a
+Question A financial services organization wants to switch from on-premises to AWS Cloud for its IT infrastructure. The CTO wishes
+to keep using the company's numerous long-term server-bound licenses across the application stack even after shifting to AWS.
+Which of the following would you suggest as the course of action as a solutions architect?
+Option A Use Amazon EC2 dedicated hosts
+Option B Use Amazon EC2 reserved instances (RI)
+Option C Use Amazon EC2 on-demand instances
+Option D Use Amazon EC2 dedicated instances
+Correct Answer a
+Question
+An online company wants to conduct real-time sentiment analysis about its products from its social media channels using SQL.
+Which of the following solutions has the LOWEST cost and operational burden?
+Option A
+Set up a streaming data ingestion application on Amazon EC2 and connect it to a Hadoop cluster for data processing. Send the
+output to Amazon S3 and use Amazon Athena to analyze the data.
+Option B
+Configure the input stream using Amazon Kinesis Data Streams. Use Amazon Kinesis Data Analytics to write SQL queries against the
+stream.
+Option C
+Configure the input stream using Amazon Kinesis Data Streams. Use Amazon Kinesis Data Firehose to send data to an Amazon
+Redshift cluster, and then query directly against Amazon Redshift
+Option D
+Set up streaming data ingestion application on Amazon EC2 and send the output to Amazon S3 using Kinesis Data Firehose. Use
+Athena to analyze the data.
+Correct Answer b
+Question You are building a multilingual chatbot using Amazon Comprehend and Amazon Polly. The chatbot must accurately
+understand and respond to user queries in multiple languages. To ensure accurate sentiment analysis for different languages, which
+Amazon Comprehend feature would you use?
+Option A Sentiment Analysis
+Option B Language Detection
+Option C Key Phrase Extraction
+Option D Entity Recognition
+Correct Answer b
+Question Which of the following configurations correctly describes the use and placement of an AWS NAT gateway to allow instances
+in a private subnet to access the internet, while preventing inbound internet access?
+Option A Place the NAT gateway in a private subnet. Update the route table of the public subnet to route internet-bound traffic through
+the NAT gateway
+Option B Place the NAT gateway in a private subnet. Update the route table of the private subnet to route internet-bound traffic
+through the NAT gateway.
+Option C Place the NAT gateway in a public subnet. Update the route table of the private subnet to route internet-bound traffic through
+the NAT gateway
+Option D Place the NAT gateway in a public subnet. Update the route table of the public subnet to route internet-bound traffic through
+the NAT gateway
+Correct Answer c
+Question A company is experiencing extended periods of low resource utilization for its Amazon EC2 instances due to planned
+shutdowns. The applications running on these instances require their in-memory data to be preserved for continued operation upon
+restart. As a Cloud Architect, which feature would you recommend to optimize costs without compromising data integrity?
+Option A Stop the instances before the shutdown and start them again.
+Option B Terminate the instances before the shutdown and recreate them after the shutdown using the latest AMI.
+Option C Use Amazon EC2 hibernation to preserve the instance's memory state during shutdown.
+Option D Use Amazon EBS snapshots to back up the instance's memory before shutdown and restore it on startup.
+Correct Answer c
+Question
+Your company currently has a 2-tier web application running in an on-premises data center. You have experienced several
+infrastructure failures in the past two months resulting in significant financial losses. Your CIO is strongly agreeing to move the
+application to AWS. While working on achieving buy-in from the other company executives, he asks you to develop a disaster
+recovery plan to help improve Business continuity in the short term. He specifies a target Recovery Time Objective (RTO) of 4 hours
+and a Recovery Point Objective (RPO) of 1 hour or less. He also asks you to implement the solution within 2 weeks. Your database is
+200GB in size and you have a 20Mbps Internet connection. How would you do this while minimizing costs?
+Option A
+Create an EBS backed private AMI which includes a fresh install or your application. Setup a script in your data center to backup the
+local database every 1 hour and to encrypt and copy the resulting file to an S3 bucket using multi-part upload
+Option B
+Install your application on a compute-optimized EC2 instance capable of supporting the application’s average load synchronously
+replicate transactions from your on-premises database to a database instance in AWS across a secure Direct Connect connection.
+Option C
+Deploy your application on EC2 instances within an Auto Scaling group across multiple availability zones asynchronously replicate
+transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+Option D
+Create an EBS backed private AMI that includes a fresh install of your application. Develop a Cloud Formation template which
+includes your AMI and the required EC2. Auto-Scaling and ELB resources to support deploying the application across Multiple
+Availability Zones. Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a
+secure VPN connection.
+Correct Answer d
+Question
+You need to create a simple, holistic check for your system’s general availability and uptime. Your system presents itself as an HTTPspeaking API. What is the simplest cost effective tool on AWS to achieve this with?
+Option A
+Route53 Health Checks
+Option B
+CloudWatch Health Checks
+Option C
+AWS ELB Health Checks
+Option D
+EC2 Health Checks
+Correct Answer a
+Question
+When attached to an Amazon VPC which two components provide connectivity with external networks? Choose 2 options.
+Option A
+Elastic IPs(EIP)
+Option B
+NAT Gateway(NAT)
+Option C
+Internet Gateway(IGW)
+Option D
+Virtual Private Gateway(VGW)
+Correct Answer cd
+Question You are managing a high-traffic e-commerce website running on Amazon RDS for MySQL. The website experiences
+significant page loading times and potential downtime. When would the implementation of read replicas be most beneficial for this
+scenario?
+Option A When the primary database instance is consistently underutilized.
+Option B When write operations significantly outweigh read operations.
+Option C When the website experiences high read traffic during peak periods.
+Option D When there is a need for disaster recovery but not performance optimization.
+Correct Answer c
+Question
+Given Subnet with a CIDR block 10.0.0.0/24 which among the following five IPs are reserved for VPC Router?
+Option A
+10.0.0.0
+Option B
+10.0.0.1
+Option C
+10.0.0.2
+Option D
+10.0.0.3
+Correct Answer b
+Question
+An enterprise has deployed its workload in AWS for a long time. They want to perform analytics using the application and server logs.
+The logs may not be accessed after the analysis is done, however, may have to be retained for over a year for audit purposes. Which
+of the following is the cost effective solution?
+Option A
+Store the logs in EBS volumes
+Option B
+Store the logs in S3 standard storage and manually push them to Glacier after the analysis
+Option C
+Store the logs in S3 standard and use life cycle policies to automatically push them to Glacier
+Option D
+Store the logs in S3 standard and use life cycle policies to automatically push them to Redshift for analysis
+Correct Answer c
+Question A financial firm has huge transaction data stored in S3 buckets. They want to analyze the data directly from the S3 bucket
+to get some business insights. Also, they want to create modern interactive dashboards which will help to accelerate decision making.
+As a Cloud Architect which of the following services would you recommend for the stated requirement?
+Option A AWS Athena, AWS QuickSight
+Option B AWS Glue, AWS QuickSight
+Option C AWS Athena, AWS Data Sync
+Option D AWS EMR, AWS Data Sync
+Correct Answer a
+Question A multinational health company wants to design a highly available microservices architecture. The platform requires rapid
+deployment, fault tolerance, and continuous delivery. Which combination of AWS services and practices would BEST implement an
+immutable infrastructure strategy for microservices?
+Option A EC2 instances with manual updates, Elastic Load Balancing for distribution
+Option B AWS Fargate with Docker images, Amazon ECS for container orchestration, and Application Load Balancing
+Option C AWS Lambda with serverless functions, API Gateway for API management
+Option D EC2 instances with configuration management tools, Auto Scaling for scaling
+Correct Answer b
+Question A Solutions Architect must design an AWS-based web application to sell temporary access to premium content stored in
+S3. Once purchased, users should be able to download the content for 14 days. How can a Solutions Architect implement a simple
+system on AWS to sell time-limited access to S3-stored content?
+Option A Use an Amazon CloudFront distribution with an origin access identity (OAI). Configure the distribution with an Amazon S3
+origin to provide access to the file through signed URLs. Design a Lambda function to remove data that is older than 14 days.
+Option B Use an S3 bucket and provide direct access to the file. Design the application to track purchases in a DynamoDB table.
+Configure a Lambda function to remove data that is older than 14 days based on a query to Amazon DynamoDB.
+Option C Use an Amazon CloudFront distribution with an OAI. Configure the distribution with an Amazon S3 origin to provide access
+to the file through signed URLs. Design the application to set an expiration of 14 days for the URL.
+Option D Use an Amazon CloudFront distribution with an OAI. Configure the distribution with an Amazon S3 origin to provide access
+to the file through signed URLs. Design the application to set an expiration of 60 minutes for the URL and recreate the URL as
+necessary.
+Correct Answer c
+Question For the upcoming year, an IT business wishes to minimize the expenses associated with its fleet of 100 Amazon EC2
+instances. The engineering team saw that 70 of these instances manage the compute services for its flagship application and must
+always be accessible based on past studies. Jobs that can tolerate a processing delay in batches are handled by the remaining 30
+instances. Which of the following as a Solutions Architect would you suggest as the MOST economical solution ?
+Option A Purchase 70 on-demand instances and 30 reserved instances
+Option B Purchase 70 reserved instances (RIs) and 30 spot instances
+Option C Purchase 70 on-demand instances and 30 spot instances
+Option D Purchase 70 reserved instances and 30 on-demand instances
+Correct Answer b
+Question Your organization has a strict compliance requirement to encrypt sensitive data in transit between your on-premises data
+center and an AWS VPC. You need dedicated high-performance and low-latency connection with guaranteed strong security. As a
+AWS Cloud Architect which of the following options would you consider to be most suitable for this use-case?
+Option A Use AWS Direct Connect with HTTPS for data encryption.
+Option B Establish a VPN connection between the data center and AWS, using IPsec for encryption.
+Option C Use AWS Transfer Family with SFTP for secure file transfers.
+Option D Encrypt data manually before transferring it over the internet.
+Correct Answer a
+Question
+You currently operate a web application in the AWS US-East region. The application runs on an auto-scaled layer of EC2 instances
+and an RDS Multi-AZ database. Your IT security compliance officer has tasked you to develop a reliable and durable logging solution
+to track changes made to your EC2, IAM, and RDS resources. The solution must ensure the integrity and confidentiality of your log
+data. Which of following solution would you recommend?
+Option A
+Create a new Cloud Trail with one new S3 bucket to store the logs and with the global services option selected. Use IAM roles S3
+bucket policies and Multi Factor Authentication (MFA) delete on the S3 bucket that stores your logs.
+Option B
+Create a new Cloud Trail with one new S3 bucket to store the logs. Configure SNS to send log file delivery notifications to your
+management system. Use IAM roles and S3 bucket policies on the S3 bucket that stores your logs.
+Option C
+Create a new Cloud Trail with an existing S3 bucket to store the logs and with the global services option selected. Use S3 ACLs and
+Multi Factor Authentication (MFA) delete on the S3 bucket that stores your logs.
+Option D
+Create three new Cloud trails with three new S3 buckets to store the logs-one for the AWS management console, one for AWS SDKs
+,and one for command line tools. Use IAM roles and S3 bucket policies on the S3 buckets that store your logs.
+Correct Answer a
+Question A media company is looking to build a highly scalable and cost-effective platform to process and store large volumes of
+video content. The content will be ingested from various sources, including cameras, drones, and mobile devices. The company
+should quickly process and analyze video data for insights, and then store the processed data for long-term archival. As an Architect
+Which combination of AWS services you consider would best suit the media company's requirements for ingesting, processing,
+storing, and analyzing video data?
+Option A Amazon S3, AWS Elastic Beanstalk, Amazon RDS, Amazon Redshift
+Option B Amazon Kinesis Video Streams, AWS Lambda, Amazon S3, Amazon EMR
+Option C Amazon EC2, AWS Elastic Beanstalk, Amazon EBS, Amazon Redshift
+Option D AWS Elemental MediaConvert, Amazon S3, AWS Lambda, Amazon DynamoDB
+Correct Answer b
+Question
+A user is testing a new service that receives location updates from 3,600 rental cars every hour. Which service will collect data and
+automatically scale to accommodate production workload?
+Option A
+Amazon EC2
+Option B
+Amazon Kinesis Firehose
+Option C
+Amazon EBS
+Option D
+Amazon API Gateway
+Correct Answer d
+Question A solution architect is designing an online gaming platform that needs to handle large number of concurrent players and
+minimize latency. Which distributed design pattern would be MOST suitable for managing player sessions and state across multiple
+servers?
+Option A Load Balancing
+Option B Sharding
+Option C Stateless Architecture
+Option D Session Stickiness
+Correct Answer b
+Question
+Which of the following is not a property of Elastic Network Interface(ENI)?
+Option A
+ENI has a primary private IP address
+Option B
+One or more secondary private IP addresses
+Option C
+One or more Elastic IP address per private IP address
+Option D
+One public IP address which can be auto-assigned to the network
+Correct Answer c
+Question
+An application is running on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Auto Scaling group
+across multiple Availability Zones. Four instances are required to handle a predictable traffic load. The Solutions Architect wants to
+ensure that the operation is fault-tolerant up to the loss of one Availability Zone.
+Which is the MOST cost-efficient way to meet these requirements?
+Option A
+Deploy two instances in each of three Availability Zones.
+Option B
+Deploy two instances in each of two Availability Zones.
+Option C
+Deploy four instances in each of two Availability Zones.
+Option D
+Deploy one instance in each of three Availability Zones.
+Correct Answer a
+Question You are developing a video streaming platform where end users can upload their video content which will be accessed by
+end users across the globe. You need to design a cost-optimized architecture to support millions of concurrent users across the globe.
+As a cloud Architect, which of the following strategies would you recommend?
+Option A Use S3 Standard-Infrequent Access (S3 Standard-IA) for storing video content
+Option B Leverage AWS Elemental MediaConvert for transcoding videos to different formats
+Option C Utilize AWS CloudFront's edge locations for caching content
+Option D All the given options
+Correct Answer d
+Question A marketing enterprise is experiencing slow query performance while analyzing petabytes of transactional data stored in
+Amazon S3 using Athena. As a Solution Architect which of the following strategies would you recommend for improving query
+performance without significantly increasing costs?
+Option A Increase the number of Athena workers.
+Option B Upgrade the instance type of the Athena workers.
+Option C Partition the data based on frequently queried columns and compress it using a suitable format like Parquet or ORC.
+Option D Convert the data to a columnar format like Parquet and create appropriate indexes.
+Correct Answer c
+Question
+A mobile application serves scientific articles from individual files in an Amazon S3 bucket. Articles older than 30 days are rarely read.
+Articles older than 60 days no longer need to be available through the application, but the application owner would like to keep them
+for historical purposes.
+Which cost-effective solution BEST meets these requirements?
+Option A
+Create a Lambda function to move files older than 30 days to Amazon EBS and move files older than 60 days to Amazon Glacier.
+Option B
+Create a Lambda function to move files older than 30 days to Amazon Glacier and move files older than 60 days to Amazon EBS.
+Option C
+Create lifecycle rules to move files older than 30 days to Amazon S3 Standard Infrequent Access and move files older than 60 days to
+Amazon Glacier.
+Option D
+Create lifecycle rules to move files older than 30 days to Amazon Glacier and move files older than 60 days to Amazon S3 Standard
+Infrequent Access.
+Correct Answer c
+Question
+A company currently stores data for on-premises applications on local drives. The chief technology officer wants to reduce hardware
+costs by storing the data in Amazon S3 but does not want to make modifications to the applications. To minimize latency, frequently
+accessed data should be available locally.
+What is a reliable and durable solution for a solutions architect to implement that will reduce the cost of local storage?
+Option A
+Deploy an SFTP client on a local server and transfer data to Amazon S3 using AWS Transfer for SFTP.
+Option B
+Deploy an AWS Storage Gateway volume gateway configured in cached volume mode.
+Option C
+Deploy an AWS DataSync agent on a local server and configure an S3 bucket as the destination.
+Option D
+Deploy an AWS Storage Gateway volume gateway configured in stored volume mode.
+Correct Answer b
+Question An Architect of a financial services platform is designing a data processing pipeline that involves multiple steps: extract data
+from an S3 bucket, transform data using an AWS Lambda function, and load data into an Amazon Redshift cluster. She wants to
+ensure an sequential execution, and visibility into the workflow. Which of the below AWS service is best suited for orchestrating this
+data pipeline?
+Option A AWS Lambda
+Option B AWS Glue
+Option C AWS Step Functions
+Option D AWS CloudFormation
+Correct Answer c
+Question
+A Solutions Architect is designing a service that must have four Amazon EC2 instances running between 8 AM and 6 PM daily. The
+service requires one EC2 instance outside of those hours. What is the MOST cost-effective way to provide enough compute?
+Option A
+Use one Amazon EC2 Reserved Instance and use an Auto Scaling group to add and remove EC2 instances based on CPU utilization.
+Option B
+Use one Amazon EC2 On-Demand instance and use an Auto Scaling group to add and remove EC2 instances based on CPU
+utilization.
+Option C
+Use one Amazon EC2 On-Demand instance and use an Auto Scaling Group scheduled action to add three EC2 Spot instances at
+7:30 AM and remove three instances at 6:10 PM.
+Option D
+Use one Amazon EC2 Reserved Instance and use an Auto Scaling Group scheduled action to add three EC2 On-Demand instances
+at 7:30 AM and remove three instances at 6:10 PM.
+Correct Answer b
+Question
+One of your client having office at N. Virginia region, uses S3 buckets to store all the newly released policy details. They have given
+you a requirement that any latest policy detail documents that is placed in S3 bucket should be immediately available to the S3 bucket
+of her counterpart in Australia using the same AWS account. How do we fulfil the requirement cost effectively with minimum effort
+involved?
+Option A
+Write a python lambda function which would copy files from source bucket to destination bucket and trigger it using CloudWatch
+Events
+Option B
+Write a system manager command to be triggered as soon as the source file is updated with a new file
+Option C
+Use cross-region replication feature of S3 to copy data between buckets
+Option D
+Create a CloudWatch alarm which would trigger a lambda function every 5 minutes to check the source bucket and copy any new
+uploads into the destination bucket
+Correct Answer c
+Question A financial services company is planning to establish a dedicated network connection between their on-premises data
+center and the AWS environment to enhance data transfer speed and security for their critical financial applications. They want to
+ensure that their connection is secure, reliable, and optimized for performance. As a Solutions Architect , Which of the following
+configuration you would propose for the requirement?
+Option A Establish an AWS Direct Connect connection with a public virtual interface to directly access AWS public services such as
+Amazon S3 and Amazon DynamoDB
+Option B Set up an AWS Direct Connect connection to a Direct Connect location, create a private virtual interface to connect to your
+Amazon VPC, and configure an additional VPN for redundancy
+Option C Set up an AWS Direct Connect connection to a Direct Connect location, create a private virtual interface to connect to your
+Amazon VPC, and use a public virtual interface to access AWS public services
+Option D Use AWS Direct Connect with a VPN connection to create a secure, high-speed connection to your AWS environment.
+Correct Answer c
+Question
+You have five CloudFormation templates; each template is for a different application architecture. This architecture varies between
+your blog apps and your gaming apps. What determines the cost of using the CloudFormation templates?
+Option A
+The time it takes to build the architecture with Cloud Formation.
+Option B
+Cloud Formation does not have any additional cost but you are charged for the underlying resources it builds.
+Option C
+0.10$ per template per month
+Option D
+0.20$ per template per month
+Correct Answer b
+Question A Startup company is running a multi-tier application on AWS. The front-end and backend tiers both run on Amazon EC2,
+and the database runs on Amazon RDS for MySQL. The backend tier communicates with the RDS instance. There are frequent calls
+to return identical datasets from the database that are causing performance slowdowns. Which action should be taken to improve the
+performance of the backend?
+Option A Implement Amazon SQS to store the database calls.
+Option B Implement Amazon ElastiCache to cache the large datasets.
+Option C Implement an RDS for MySQL read replica to cache database calls.
+Option D Implement Amazon DynamodB Accelerator calls to cache the database Calls.
+Correct Answer b
+Question
+An application hosted on AWS uses object storage for storing internal reports that are accessed daily by the CFO. Currently, these
+reports are publicly available. How should a Solutions Architect re-design this architecture to prevent unauthorized access to these
+reports?
+Option A
+Encrypt the files on the client side and store the files on Amazon Glacier, then decrypt the reports on the client side.
+Option B
+Move the files to Amazon ElastiCache and provide a username and password for downloading the reports.
+Option C
+Specify the use of AWS KMS server-side encryption at the time of an object creation on Amazon S3.
+Option D
+Store the files on Amazon S3 and use the application to generate S3 pre-signed URLs to users.
+Correct Answer a
+Question A healthcare organization requires a highly available and scalable database solution to store patient records, medical
+images, and other sensitive data. The database needs to support both transactional and analytical workloads and ensure data
+integrity and security. Which AWS database service would be most appropriate for this scenario, considering the need for high
+availability, scalability, and data security?
+Option A Amazon Aurora, offering high availability, performance, and compatibility with MySQL and PostgreSQL.
+Option B Amazon DynamoDB, providing low latency and high throughput for operational workloads.
+Option C Amazon RDS for MySQL, offering familiar relational database features and high availability.
+Option D Amazon Redshift, optimized for petabyte-scale data warehousing and analytics.
+Correct Answer a
+Question Your organization uses AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your web applications. As an
+Architect, You want to ensure uninterrupted service by automatically renewing certificates before they expire. Which of the following
+options would be the most effective approach?
+Option A Manually check certificate expiration dates and renew them when necessary.
+Option B Use AWS CloudWatch to monitor certificate expiration and create custom alarms.
+Option C Enable automatic certificate renewal in AWS Certification Manager (ACM).
+Option D Implement a custom script to check and renew certificates using the AWS Certification Manager (ACM) API.
+Correct Answer c
+Question You are a solution architect for an e-commerce project executed by your organization which is expected to have high traffic.
+You need to design a cost-optimized network architecture to support your growing customer base. Which of the following AWS
+services would be most suitable for distributing your application and data across multiple regions to improve latency and availability?
+Option A AWS Network ELB
+Option B AWS S3
+Option C AWS Global Accelerator
+Option D AWS Route 53
+Correct Answer c
+Question A corporation is considering hosting its less-used files on AWS, where hundreds of Amazon EC2 instances can access
+them simultaneously. The business requires the most affordable file storage solution that offers quick access to data anytime it's
+needed. As an Architect, Which of the following you consider as the best solution that meets the stated requirements?
+Option A Amazon Elastic Block Store (EBS)
+Option B Amazon Elastic File Systems (EFS) Standard Storage Class
+Option C Amazon Elastic File Systems (EFS) Standard-IA Storage Class
+Option D Amazon S3 Standard-Infrequent Access (S3 Standard – IA) Storage Class
+Correct Answer c
+Question An organization is building a large-scale data warehouse to store and analyze terabytes of data which gets data from
+various sources on premises. You need to design a cost-optimized network architecture to support network traffic between your data
+warehouse and data sources. As an Architect Which AWS service would you consider for this requirement?
+Option A AWS VPC Peering
+Option B AWS Transit Gateway
+Option C AWS Route 53
+Option D AWS Direct Connect
+Correct Answer b
+Question
+A company uses Reserved Instances to run its data-processing workload. The nightly job typically takes 7 hours to run and must finish
+within a 10-hour time window. The company anticipates temporary increases in demand at the end of each month that will cause the
+job to run over the time limit with the capacity of the current resources. Once started, the processing job cannot be interrupted before
+completion. The company wants to implement a solution that would allow it to provide increased capacity as cost-effectively as
+possible.
+What should a solutions architect do to accomplish this?
+Option A
+Deploy On-Demand Instances during periods of high demand.
+Option B
+Create a second Amazon EC2 reservation for additional instances.
+Option C
+Deploy Spot Instances during periods of high demand.
+Option D
+Increase the instance size of the instances in the Amazon EC2 reservation to support the increased workload.
+Correct Answer a
+Question
+A user has created a VPC with a subnet and a security group. The user has launched an instance in that subnet and attached a public
+IP. The user is still unable to connect to the instance. The internet gateway has also been created. What can be the reason for the
+error?
+Option A
+The internet gateway is not configured with the route table
+Option B
+The private IP is not present
+Option C
+The outbound traffic on the security group is disabled
+Option D
+The internet gateway is not configured with the security group
+Correct Answer a
+Question You are building a highly available web application using AWS. The application has multiple EC2 instances running web
+servers behind an Application Load Balancer (ALB). You want to optimize web application performance and ensure high availability.
+Which ALB feature would you use to distribute traffic across multiple target groups, each containing EC2 instances with different
+configurations (e.g., CPU, memory), allowing you to test and deploy new application versions without affecting existing traffic?
+Option A Target group stickiness
+Option B Fully Meshed VPC Peering
+Option C Security groups
+Option D Canary deployments
+Correct Answer d
+Question You need to protect sensitive customer data transmitted between a web application and an AWS S3 bucket. Which of the
+following approaches would provide the strongest encryption for data in transit?
+Option A Rely solely on S3 server-side encryption (SSE) to protect data.
+Option B Encrypt data on the client-side before uploading it to S3.
+Option C Encrypt data using HTTPS/TLS and additionally implement S3 SSE.
+Option D Use AWS KMS to encrypt data before uploading it to S3.
+Correct Answer c
+Question
+www.picsee.com website has millions of photos and also thumbnails for each photo. Thumbnails can easily be reproduced from the
+actual photo. However, a thumbnail takes less space than actual photo. Which of the following is the best solution to store
+thumbnails?
+Option A
+S3
+Option B
+Reduced Redundancy Storage
+Option C
+DynamoDB
+Option D
+Elastic Cache
+Correct Answer b
+Question
+A company wants to implement their website in a virtual private cloud (VPC). The web tier will use an Auto Scaling group across
+multiple Availability Zones (AZs). The database will use Multi-AZ RDS MySQL and should not be publicly accessible. What is the
+minimum number of subnets that need to be configured in the VPC?
+Option A
+1
+Option B
+2
+Option C
+3
+Option D
+4
+Correct Answer d
+Question
+A company needs to deploy services to an AWS region which they have not previously used. The company currently has an AWS
+identity and Access Management (IAM) role for the Amazon EC2 instances, which permits the instance to have access to Amazon
+DynamoDB. The company wants their EC2 instances in the new region to have the same privileges. How should the company
+achieve this?
+Option A
+Create a new IAM role and associated policies within the new region
+Option B
+Assign the existing IAM role to the Amazon EC2 instances in the new region
+Option C
+Copy the IAM role and associated policies to the new region and attach it to the instances
+Option D
+Create an Amazon Machine Image (AMI) of the instance and copy it to the desired region using the AMI Copy feature
+Correct Answer b
+Question
+A Solutions Architect is designing network architecture for an application that has compliance requirements. The application will be
+hosted on Amazon EC2 instances in a private subnet and will be using Amazon S3 for storing data. The compliance requirements
+mandate that the data cannot traverse the public Internet. What is the MOST secure way to satisfy this requirement?
+Option A
+Use a NAT Instance.
+Option B
+Use a NAT Gateway.
+Option C
+Use a VPC endpoint.
+Option D
+Use a Virtual Private Gateway.
+Correct Answer c
+Question A video streaming service is experiencing rapid growth in subscribers and video content. To ensure optimal performance
+and scalability, the company needs to implement a robust network architecture. Which AWS service is primarily used to distribute
+content globally, reducing latency and improving user experience?
+Option A AWS Elastic Load Balancing
+Option B AWS Auto Scaling
+Option C Amazon CloudFront
+Option D AWS Route 53
+Correct Answer c
+Question An online food ordering and delivery company has an RDS MySQL database that stores critical customer data. The IT team
+of the company needs to implement a robust backup strategy to protect against data loss to meet the RTO and RPO of 1 day. As an
+Architect, Which of the following backup options would you provide to meet the RTO, RPO requirements for the database?
+Option A Rely solely on RDS automatic backups to meet the requirement
+Option B Create manual database snapshots once in 2 days to meet the requirements
+Option C Replicate the database to a standby instance in a different region to meet the requirement
+Option D Use RDS daily backups and AWS Backup to create additional copy to meet the requirement
+Correct Answer d
+Question An e-commerce company has huge clickstream data stored in S3 bucket. They want to analyze this data using Redshift
+which is hosted in a private subnet of a VPC. As a Solutions Architect which of the following options will be a better choice, for
+analyzing the data in S3 without transforming/copying or loading the data in Redshift?
+Option A Create a VPC endpoint to establish a secure connection between Amazon Redshift and the S3 central bucket and use
+Amazon Athena to run the query
+Option B Use NAT Gateway to connect Amazon Redshift to the internet and access the S3 static website. Use Amazon Redshift
+Spectrum to run the query
+Option C Create a VPC endpoint to establish a secure connection between Amazon Redshift and the S3 central bucket and use
+Amazon Redshift Spectrum to run the query
+Option D Create Site-to-Site VPN to set up a secure connection between Amazon Redshift and the S3 central bucket and use
+Amazon Redshift Spectrum to run the query
+Correct Answer c
+Question You have a containerized application that needs to be deployed in a highly available and scalable environment without
+managing underlying infrastructure. Which AWS compute service would be best suited for deploying this containerized application,
+considering factors like ease of management, scalability, and cost-efficiency?
+Option A Amazon EC2 with Docker
+Option B Amazon ECS with EC2
+Option C Amazon ECS Fargate
+Option D Amazon Elastic Beanstalk
+Correct Answer c
+Question A financial organization using UDP for its web application in the Asia Pacific region wants to expand globally. How can we
+improve application performance, address latency issues, and ensure uninterrupted service and rapid recovery in case of AWS region
+failures? Choose TWO.
+Option A AWS Elastic Load Balancing (ELB)
+Option B AWS Global Accelerator
+Option C Amazon CloudFront
+Option D Amazon Route 53
+Correct Answer bc
+Question
+An organization has created 50 IAM users. The organization has introduced a new policy which will change the access of an IAM
+user. How can the organization implement this effectively so that there is no need to apply the policy at the individual user level?
+Option A
+Use the IAM groups and add users as per their role to different groups and apply policy to group
+Option B
+The user can create a policy and apply it to multiple users in a single go with the AWS CLI
+Option C
+Add each user to the IAM role as per their organization role to achieve effective policy setup
+Option D
+Use the IAM role and implement access at the role level
+Correct Answer a
+Question iNet Tech is deploying a new web application on AWS that requires secure management of sensitive information such as
+database credentials, API keys, and third-party service passwords. They need an efficient solution that allows them to store, rotate,
+and manage access to these secrets. They also want to ensure that the secrets are automatically updated, and that the application
+retrieves the latest versions of the secrets when needed. Which of the following approaches would meet the stated requirement?
+Option A Use AWS Secrets Manager to store the sensitive information. Embed the secrets directly into the application code, and
+manually update the application whenever the secrets change
+Option B Use AWS Secrets Manager to store the sensitive information. Configure automatic rotation for the secrets and modify the
+application to retrieve the secrets using the AWS SDK at runtime.
+Option C Configure automatic rotation of the secrets and manually update the secrets in Secrets Manager whenever they change
+Option D Configure automatic rotation of the secrets, and manually update the application code whenever the secrets change
+Correct Answer b
+Question You're building a high-traffic e-commerce website on AWS, and you're experiencing performance issues due to frequent
+database queries. Which AWS caching service would be most suitable for storing frequently accessed product information to reduce
+database load and improve website performance?
+Option A Amazon ElastiCache for Redis
+Option B Amazon DynamoDB
+Option C Amazon S3
+Option D Amazon EFS
+Correct Answer a
+Question On Amazon Elastic Compute Cloud (Amazon EC2) instances, an application executes big data workloads. The program
+requires 300 instances to handle demand spikes and requires at least 20 instances to maintain a minimum acceptable performance
+level. The application operates continuously around the clock, year-round. The application requires 80 instances 80% of the time,
+based on workloads it has processed in the past. Which of the following, in your opinion as a solutions architect, is the MOST
+economical option to satisfy workload demands consistently?
+Option A Purchase 80 on-demand instances. Provision additional on-demand and spot instances per the workload demand (Use Auto
+Scaling Group with launch template to provision the mix of on-demand and spot instances)
+Option B Purchase 20 on-demand instances. Use Auto Scaling Group to provision the remaining instances as spot instances per the
+workload demand
+Option C Purchase 80 spot instances. Use Auto Scaling Group to provision the remaining instances as on-demand instances per the
+workload demand
+Option D Purchase 80 reserved instances (RIs). Provision additional on-demand and spot instances per the workload demand (Use
+Auto Scaling Group with launch template to provision the mix of on-demand and spot instances)
+Correct Answer d
+Question A solutions architect is using an AWS CloudFormation template to deploy a three-tier web application. The web application
+consists of a web tier and an application tier that stores and retrieves user data in Amazon DynamoDB tables. The web and
+application tier are hosted on Amazon EC2 instances, and the database tier is not publicly accessible. The application EC2 instances
+need to access the DynamoDB tables without exposing API credentials in the template. What should the solutions architect do to
+meet these requirements?
+Option A Create an IAM role to read the DynamoDB tables. Associate the role with the application instances by referencing an
+instance profile.
+Option B Create an IAM role that has the required permissions to read and write from the DynamoDB tables. Add the role to the EC2
+instance profile and associate the instance profile with the application instances.
+Option C Use the parameter section in the AWS CloudFormation template to have the user input access and secret keys from an
+already-created IAM user that has the required permissions to read and write from the DynamoDB tables.
+Option D Create an IAM user in the AWS CloudFormation template that has the required permissions to read and write from the
+DynamoDB tables. Use the GetAtt function to retrieve the access and secret keys and pass them to the application instances through
+the user data.
+Correct Answer a
+Question
+A Solutions Architect is about to deploy an API on multiple EC2 instances in an Auto Scaling group behind an ELB. The support team
+has the following operational requirements:
+1 - They get an alert when the requests per second go over 50,000
+2 - They get an alert when latency goes over 5 seconds
+3 - They can validate how many times a day users call the API requesting highly-sensitive data
+Which combination of steps does the Architect need to take to satisfy these operational requirements? (Select two.)
+Option A
+Ensure that CloudTrail is enabled.
+Option B
+Create a custom CloudWatch metric to monitor the API for data access.
+Option C
+Configure CloudWatch alarms for any metrics the support team requires.
+Option D
+Ensure that detailed monitoring for the EC2 instances is enabled.
+Correct Answer bd
+Question Your organization handles highly sensitive financial data and requires FIPS 140-2 level 3 for encryption keys. You need to
+ensure complete control over key generation, usage, and destruction. As a Solution Architect which of the following AWS service you
+would recommend to be the most appropriate choice for managing encryption keys in this scenario?
+Option A you will recommend considering AWS KMS for generating the encryption keys
+Option B you will recommend considering AWS Cloud HSM cluster for generating the encryption keys
+Option C You will recommend the organization to bring its own encryption keys to AWS
+Option D You will recommend to use AWS provided keys for S3 to encrypt the sensitive data stored in S3 Bucket
+Correct Answer b
+Question Your organization has strict data retention policies and compliance requirements. You need to implement a solution to
+automatically classify, retain, and delete data based on its sensitivity and age. Which AWS service or combination of services would
+be most suitable for this task?
+Option A Amazon S3 with lifecycle management enabled.
+Option B Amazon Glacier Deep Archive for long-term storage and retention.
+Option C AWS Data Lifecycle Manager in combination with AWS CloudTrail for logging.
+Option D Amazon DynamoDB with time-to-live (TTL) attribute for data expiration.
+Correct Answer c
+Question As a Cloud Architect, you are involved in the design of an extremely reliable e-commerce platform on AWS. The website
+must handle numerous concurrent users and be able to recover quickly from failures. Which AWS managed service would you use to
+distribute web traffic across multiple AZs to increase fault tolerance?
+Option A Amazon S3
+Option B Amazon RDS
+Option C Amazon Elastic Load Balancing
+Option D Amazon DynamoDB
+Correct Answer c
+Question
+An organization has hosted an application on the EC2 instances. There will be multiple users connecting to the instance for setup and
+configuration of application. The organization is planning to implement certain security best practices. Which of the below mentioned
+pointers will not help the organization achieve better security arrangement?
+Option A
+Apply the latest patch of OS and always keep it updated.
+Option B
+Allow only IAM users to connect with the EC2 instances with their own secret access key.
+Option C
+Disable the password-based login for all the users. All the users should use their own keys to connect with the instance securely.
+Option D
+Create a procedure to revoke the access rights of the individual user when they are not required to connect to EC2 instance anymore
+for the purpose of application configuration.
+Correct Answer b
+Question You have a critical production database hosted in an AWS Region that experiences frequent power outages. You need to
+implement a robust backup and replication strategy to minimize data loss and ensure high availability. Which of the following options
+would be the most suitable?
+Option A Use AWS Backup to create daily backups and store them in the same AWS Region.
+Option B Create manual database snapshots and transfer them to an on-premises data center for storage.
+Option C Use Amazon EFS to store database backups and replicate them to another Availability Zone.
+Option D Implement Amazon Relational Database Management (RDS) with read replica in a different AWS Region.
+Correct Answer d
+Question
+A customer owns a simple API for their website that receives about 1,000 requests each day and has an average response time of 50
+ms. It is currently hosted on one c4.large instance.
+Which changes to the architecture will provide high availability at the LOWEST cost?
+Option A
+Create an Auto Scaling group with a minimum of one instance and a maximum of two instances, then use an Application Load
+Balancer to balance the traffic.
+Option B
+Recreate the API using Amazon API Gateway and use AWS Lambda as the service backend.
+Option C
+Create an Auto Scaling group with a maximum of two instances, then use an Application Load Balancer to balance the traffic.
+Option D
+Recreate the API using Amazon API Gateway and integrate the new API with the existing backend service.
+Correct Answer a
+Question You're designing a microservices architecture for an online gaming platform. One of the core microservices is responsible
+for managing user profiles, such as player statistics, achievements, and friend lists. Given the need to maintain user data consistency
+and handle frequent updates, which design pattern would be most suitable for this microservice?
+Option A Stateless microservice with external state management (e.g., DynamoDB)
+Option B Stateful microservice with in-memory state management
+Option C Event-driven architecture with message queues (e.g., SQS)
+Option D CQRS (Command Query Responsibility Segregation) pattern
+Correct Answer b
+Question The company that you are working for has a highly available architecture consisting of an elastic load balancer and several
+EC2 instances configured with auto-scaling across 3 Availability Zones. You should monitor EC2 instances based on a metric, which
+is not readily available in CloudWatch. Which of the following is a custom metric in CloudWatch which you must manually set up?
+Option A Memory Utilization of an EC2 instance
+Option B CPU Utilization of an EC2 instance
+Option C Disk Reads activity of an EC2 instance
+Option D Network packets out of an EC2 instance
+Correct Answer a
+Question You have a web application deployed in a public subnet. You want to ensure that only specific IP address range can access
+the application server via HTTPS. Additionally, you want to allow outbound traffic to AWS services for security updates.Which of the
+following statements are true in terms of allowing or denying traffic from or to the VPC assuming the default rules are not in effect?
+(Choose TWO)
+Option A In a Network ACL, for a successful HTTPS connection, add an inbound rule with HTTPS type, IP range in source and
+ALLOW traffic.
+Option B In a Network ACL, for a successful HTTPS connection, you must add an inbound rule and outbound rule with HTTPS type,
+IP range in source and destination respectively and ALLOW traffic.
+Option C In a Security Group, for a successful HTTPS connection, add an inbound rule with HTTPS type and IP range in the source.
+Option D In a Security Group, for a successful HTTPS connection, you must add an inbound rule and outbound rule with HTTPS type,
+IP range in source and destination respectively.
+Correct Answer bc
+Question Your company is building a large-scale data processing pipeline that involves collecting data from various sources,
+processing it, and storing the results in a data lake. Which AWS managed service would be most suitable for handling the
+asynchronous processing of data between different stages of your pipeline, ensuring decoupling and scalability?
+Option A AWS Transfer Family
+Option B Amazon SQS
+Option C Secrets Manager
+Option D AWS Lambda
+Correct Answer b
+Question
+An E-Commerce giant has several applications to run their business. They are looking at improving the resource utilization and
+scaling based on the incoming traffic. The focus is on innovation rather than IT infrastructure management. Which of the following
+solutions can be adopted?
+Option A
+Use Elastic Load Balancer with Auto scaling to distribute the traffic at the specified utilization level.
+Option B
+Use Amazon RDS for efficient database interaction
+Option C
+Use On premises database solution with AWS application deployment services
+Option D
+Use On premises deployment and store data in AWS S3.
+Correct Answer ab
+Question
+A user has created a VPC with public and private subnets using the VPC Wizard. The VPC has CIDR 20.0.0.0/16. The private subnet
+uses CIDR 20.0.0.0/24. Which of the below mentioned entries are required in the main route table to allow the instances in VPC to
+communicate with each other?
+Option A
+Destination : 20.0.0.0/24 and Target : VPC
+Option B
+Destination : 20.0.0.0/16 and Target : ALL
+Option C
+Destination : 20.0.0.0/0 and Target : ALL
+Option D
+Destination : 20.0.0.0/16 and Target : Local
+Correct Answer d
+Question
+Can you suggest, which of the following configurations is/are required, in order to access an instance launched in a public subnet of a
+VPC, from internet? Choose two options
+Option A
+Attach an Elastic IP to the instance
+Option B
+The instance in public subnet is by default accessible from the Internet
+Option C
+Launch a NAT instance and route all traffic to it
+Option D
+In the Security Group of the instance, add an inbound rule with the port and IP range in the source.
+Correct Answer ad
+Question A financial services firm operates within a highly regulated industry, necessitating stringent compliance adherence and
+minimal operational downtime in the event of a catastrophic failure. Given the organization's commitment to robust data protection and
+rapid recovery, it is willing to invest substantially in infrastructure to achieve exceptionally low Recovery Point Objectives (RPO) and
+Recovery Time Objectives (RTO). Considering the criticality of financial data, regulatory imperatives, and the potential financial
+implications of system outages, which DR strategy would be most optimal?
+Option A Backup and Restore
+Option B Pilot Light
+Option C Warm Standby
+Option D Active-Active Failover
+Correct Answer d
+Question You have a critical application that requires strict control over encryption key usage. Only a specific group of developers
+should be able to encrypt data, while a separate group of administrators should be able to rotate keys. How can you implement these
+access controls effectively using AWS KMS?
+Option A Use IAM roles with granular permissions, allowing developers to encrypt data and administrators to rotate keys.
+Option B Create two IAM users, one for developers and one for administrators, and assign them full access to the KMS key.
+Option C Create two different KMS keys, one for encryption and one for rotation, and assign appropriate permissions.
+Option D Use AWS Lambda functions to automate key management tasks, preventing direct access to the KMS key.
+Correct Answer a
+Question
+An ecommerce company has noticed performance degradation of its Amazon RDS based web application. The performance
+degradation is attributed to an increase in the number of read-only SQL queries triggered by business analysts. A solutions architect
+needs to solve the problem with minimal changes to the existing web application.
+What should the solutions architect recommend?
+Option A Export the data to Amazon DynamoDB and have the business analysts run their queries.
+Option B Load the data into Amazon ElastiCache and have the business analysts run their queries.
+Option C Create a read replica of the primary database and have the business analysts run their queries.
+Option D Copy the data into an Amazon Redshift cluster and have the business analysts run their queries.
+Correct Answer c
+Question
+A company is using an Amazon S3 bucket located in us-west-2 to serve videos to their customers. Their customers are located all
+around the world and the videos are requested a lot during peak hours. Customers in Europe complain about experiencing slow
+downloaded speeds, and during peak hours, customers in all locations report experiencing HTTP 500 errors. What can a Solutions
+Architect do to address these issues?
+Option A
+Place an elastic load balancer in front of the Amazon S3 bucket to distribute the load during peak hours.
+Option B
+Cache the web content with Amazon CloudFront and use all Edge locations for content delivery.
+Option C
+Replicate the bucket in eu-west-1 and use an Amazon Route 53 failover routing policy to determine which bucket it should serve the
+request to.
+Option D
+Use an Amazon Route 53 weighted routing policy for the CloudFront domain name to distribute the GET request between CloudFront
+and the Amazon S3 bucket directly.
+Correct Answer d
+Question Your company is developing a microservices-based application that requires high scalability and flexibility. The application
+is made up of several independent services with different computing needs and deployment methods. Which container orchestration
+platform offers the best flexibility and adaptability for managing the diverse components of your microservices application?
+Option A Amazon Elastic Container Service (ECS)
+Option B Amazon Elastic Kubernetes Service (EKS)
+Option C Docker Swarm
+Option D Apache Mesos
+Correct Answer b
+Question A logistics company needs to track the location and status of shipments in real time. The data is generated by IoT devices
+and needs to be processed and analyzed for route optimization and delivery predictions. Which AWS database services would be
+most suitable for this scenario, considering the need for real-time data processing, analytics, and time-series data storage?
+Option A Amazon DynamoDB for location data and Amazon Redshift for analytics.
+Option B Amazon Kinesis Data Firehose for data ingestion, Amazon S3 for data storage, and Amazon Redshift for analytics.
+Option C Amazon Kinesis Data Firehose for data ingestion, Amazon S3 for data storage, and Amazon QuickSight for analytics.
+Option D Amazon Kinesis Data Firehose for data ingestion, Amazon Timestream for time-series data, and Amazon SageMaker for
+analytics.
+Correct Answer d
+Question An organisation has their web application deployed on an EC2 instance. The infrastruscture management team is
+concerned about potential performance issues and wants to proactively monitor the application's health. Which CloudWatch metrics
+would the team primarily monitor to identify potential performance bottlenecks in their web application?
+Option A CPU Utilization, Disk Read Bytes, Network In
+Option B HTTP 5xx Error Count, Latency, Throughtput
+Option C Disk Write Bytes, Network Out, ELB Request Count
+Option D CPU Utilization, Disk Write Bytes, HTTP 4xx Error Count
+Correct Answer a
+Question A gaming company is developing a massively multiplayer online role-playing game (MMORPG) that requires storing player
+profiles, inventory, and game progress data. The data needs to be highly available, scalable, and able to handle massive concurrent
+reads and writes. Additionally, the game requires real-time leaderboards and player rankings. As a Solution Architect upon reviewing
+the architecture Which AWS database services would you sugget as the most appropriate for this scenario, considering the need for
+high performance, scalability, and real-time analytics?
+Option A Amazon Aurora for player profiles and Amazon DynamoDB for leaderboards.
+Option B Amazon DynamoDB for all data and Amazon Redshift for real-time analytics.
+Option C Amazon DynamoDB for all data and Amazon QuickSight for real-time analytics.
+Option D Amazon Aurora for player profiles, Amazon DynamoDB for inventory and game progress, and Amazon Redshift for
+leaderboards and analytics.
+Correct Answer c
+Question A company needs to move their file and object data between on-premises storage to AWS S3 storage. They have
+petabytes of data stored on-premises including the application data and archived data. As a Solutions Architect, which AWS Data
+Sync feature would you suggest for transferring this huge amount of data efficiently?
+Option A Parallel transfer
+Option B Incremental transfers
+Option C Data compression
+Option D Data encryption
+Correct Answer a
+Question A large e-commerce company is dealing with massive amounts of customer purchase data. They need to process this data
+in real-time to analyze sales trends, customer behavior, and optimize their marketing campaigns. They have their entire data stored in
+Amazon Redshift. If the company wants to optimize the performance of their analytical queries, which of the following techniques
+would be most effective?
+Option A Sorting data by frequently queried columns
+Option B Using a single large node for the cluster
+Option C Storing data in a single table
+Option D Using large number of small nodes
+Correct Answer a
+Question
+An AWS Consultant is being consulted to suggest a low cost solution for Amazon EBS to store snapshots while allowing you to fully
+restore data?
+Option A
+Maintain the latest snapshot as it is both incremental and complete.
+Option B
+Maintain the original snapshot and the latest incremental snapshot
+Option C
+Maintain the latest snapshot, archive the original to Amazon Glacier
+Option D
+Maintain the current snapshot, archive the original and increment to Amazon Glacier
+Correct Answer b
+Question
+You have multiple Amazon EC2 instances running in a cluster across multiple Availability Zones within the same region. What
+combination of the following should be used to ensure the highest network performance (packets per second), lowest latency, and
+lowest jitter? Choose 3 answers
+Option A
+Amazon EC2 placement groups
+Option B
+Enhanced networking
+Option C
+Amazon PV AMI
+Option D
+Amazon HVM AMI
+Correct Answer bdf
+Question
+A legacy application needs to interact with local storage using iSCSI. A team needs to design a reliable storage solution to provision
+all new storage on AWS. Which storage solution meets the legacy application requirements?
+Option A
+AWS Snowball storage for the legacy application until the application can be re-architected.
+Option B
+AWS Storage Gateway in cached mode for the legacy application storage to write data to Amazon S3.
+Option C
+AWS Storage Gateway in stored mode for the legacy application storage to write data to Amazon S3.
+Option D
+An Amazon S3 volume mounted on the legacy application server locally using the File Gateway service.
+Correct Answer c
+Question A financial services company needs to store and analyze vast amounts of historical market data for reporting and analytics
+purposes. The data is primarily read-heavy and requires fast query performance on complex analytical workloads. Which AWS
+database service would be best suited for this scenario, considering the need for high performance analytics on large datasets?
+Option A Amazon Aurora, offering high availability and performance for OLTP workloads.
+Option B Amazon DynamoDB, designed for low latency and high throughput for operational workloads.
+Option C Amazon RDS for PostgreSQL, providing a relational database with advanced features.
+Option D Amazon Redshift, optimized for petabyte-scale data warehousing and ad-hoc analytics.
+Correct Answer d
+Question
+An e-commerce application is hosted in AWS. The last time a new product was launched, the application experienced a performance
+issue due to an enormous spike in traffic. Management decided that capacity must be doubled the week after the product is launched.
+Which is the MOST efficient way for management to ensure that capacity requirements are met?
+Option A
+Add a Step Scaling policy.
+Option B
+Add a Dynamic Scaling policy.
+Option C
+Add a Scheduled Scaling action.
+Option D
+Add Amazon EC2 Spot Instances.
+Correct Answer b
+Question A video analytics company has recently been merged with a large media company. They need to quickly migrate 700TB of
+data to AWS between the on-premises data center and AWS. The organizaiton’s CTO has given a timeline of two weeks to carry out
+the data migration from on-premises data center to AWS Cloud and establish connectivity. Which of the following are the MOST costeffective options for completing the data transfer and establishing connectivity? Select TWO.
+Option A Use one Snowmobile for data transfer.
+Option B Set up a Site-to-Site VPN for connectivity.
+Option C Partially Meshed VPC Peering
+Option D Use snowmobile device for data transfer
+Correct Answer bc
+Question A popular online gaming platform is experiencing significant performance degradation during peak playing hours. The
+platform's backend servers, hosted on Amazon EC2 instances, are consistently reaching maximum CPU utilization, leading to
+increased response times and lag for players. Which of the following actions would be most effective in addressing the performance
+issue while maintaining cost-efficiency?
+Option A Increase the instance type of the EC2 instances to a larger size with higher CPU and memory capacity.
+Option B Implement auto-scaling to automatically adjust the number of EC2 instances based on CPU utilization, scaling up during
+peak load and down during off-peak hours.
+Option C Optimize the application code and database queries to reduce CPU consumption and improve efficiency.
+Option D Utilize Amazon Elastic Load Balancing (ELB) to distribute incoming traffic across multiple EC2 instances, reducing the load
+on individual instances.
+Correct Answer b
+Question An oil and Natural gas Refinery is planning to enhance its Application security and user management experience of the
+cloud-based application. They want to implement security measures to detect and respond to potential threats within their AWS
+environment and manage user authentication and access control for their application. As a Solutions Architect you are approached
+with the stated requirement for organization, Which of the below solutions you would propose to meet the stated requirement?
+Option A Use Amazon GuardDuty to monitor and detect potential security threats and unusual behavior within the AWS environment,
+while using Amazon Cognito to manage user authentication and authorization for secure application access
+Option B Use Amazon GuardDuty to manage user authentication and access control for the application, and Amazon Cognito to
+monitor and detect security threats and unusual behavior within the AWS environment.
+Option C Use Amazon Macie to manage user authentication and access control for the application, and Amazon Cognito to monitor
+and detect security threats and unusual behavior within the AWS environment
+Option D Use AWS Inspector to manage user authentication and access control for the application, and Amazon Cognito to monitor
+and detect potential security threats and unusual behavior within the AWS environment.
+Correct Answer a
+Question A retail company needs to store and analyze customer purchase history, product information, and sales data for targeted
+marketing campaigns and inventory management. The data is expected to grow rapidly, and the company needs to be able to quickly
+analyze large datasets to identify trends and customer preferences. As a Solution Architect upon reviewing the architecture which
+AWS database services would be most suitable for this scenario, considering the need for data warehousing, analytics, and machine
+learning?
+Option A Amazon Aurora for transactional data and Amazon Redshift for analytics.
+Option B Amazon DynamoDB for product information and Amazon Redshift for customer data and analytics.
+Option C Amazon Redshift for data warehousing and Amazon SageMaker for machine learning.
+Option D Amazon S3 for data storage, Amazon EMR for data processing, and Amazon QuickSight for analytics.
+Correct Answer c
+Question You are a developer tasked with creating a REST API for a new e-commerce platform to handle product catalog
+management. The API needs to support CRUD operations (Create, Read, Update, Delete) on product information. You are using
+Amazon API Gateway to manage the API. Which Amazon API Gateway tool helps limit the number of requests to your product
+catalog API?
+Option A API Keys
+Option B Usage Plans
+Option C Lambda Authorizers
+Option D Integration Request
+Correct Answer b
+Question An automobile company wants to migrate their monolithic application to serverless architecture using AWS Lambda. They
+need to ensure optimal performance and troubleshoot issues efficiently. As a cloud architect of the company, which AWS services
+would you use to monitor the performance of serverless functions, identify cold starts, and optimize resource utilization?
+Option A AWS X-Ray, Amazon CloudWatch, AWS Lambda Power Tuning
+Option B Amazon CloudWatch, AWS Step Functions, AWS Lambda Power Tuning
+Option C AWS X-Ray, Amazon SNS, AWS Lambda Power Tuning
+Option D Amazon CloudWatch, AWS SQS, AWS Lambda Power Tuning
+Correct Answer a
+Question
+A company is using AWS Key Management Service (AWS KMS) to secure their Amazon RDS databases. An auditor has
+recommended that the company log all use of their AWS KMS keys. Which of the following the SIMPLEST solution?
+Option A
+Associate AWS KMS metrics with Amazon CloudWatch.
+Option B
+Use AWS CloudTrail to log AWS KMS key usage.
+Option C
+Deploy a monitoring agent on the RDS instances.
+Option D
+Poll AWS KMS periodically with a scheduled job.
+Correct Answer b
+Question A gaming firm wants to analyze large datasets stored in S3 and create interactive dashboards. Amazon Athena is used to
+query the data directly from the S3 data lake. The Architect of the organization has observed that Athena service is incurring higher
+costs than expected. Which of the following techniques can be followed for optimizing the costs? (Choose THREE)
+Option A Optimize SQL queries by using appropriate WHERE clauses to limit the amount of data scanned
+Option B Consider the status of stored files, including formats, file size, and compression. Avoid formats that result in larger data files
+Option C Observe the query performance continuously using CloudWatch service
+Option D Write SQL queries in such a way that it can scan huge amounts of data with all columns
+Correct Answer abe
+Question A company is investigating potential solutions that would collect, process, and store users' service usage data. The
+business objective is to create an analytics capability that will enable the company to gather operational insights quickly using
+standard SQL queries. The solution should be highly available and ensure Atomicity, Consistency, Isolation, and Durability (ACID)
+compliance in the data tier. Which solution should a solutions architect recommend?
+Option A Use an Amazon Keyspaces database.
+Option B Use an Amazon document database with a Multi-AZ design.
+Option C Use a fully managed Amazon RDS for MySQL database in a Multi-AZ design.
+Option D Deploy PostgreSQL on an Amazon EC2 instance that uses Amazon Elastic Block Store (Amazon EBS) Throughput
+Optimized HDD (st1) storage.
+Correct Answer d
+Question
+An organization wants to troubleshoot a target EC2 instance attached to an internal HTTP Elastic Load Balancer inside a private VPC.
+The instance is showing Unhealthy status. What could be the appropriate reason(s)? Choose two options.
+Option A
+Port 80/443 is restricted on EC2 instance's Security Group from the Load balancer
+Option B
+The route table is not defined for the subnet
+Option C
+The HTTP service could be in stopped state
+Option D
+The ping path does not exist on the EC2 instance
+Correct Answer ad
+Question
+A Retail shopping cart is deploying a new e-commerce application on AWS and wants to ensure robust security for both the network
+and application layers. They should protect the application from large-scale DDoS attacks and want to filter and monitor HTTP
+requests to safeguard against common web vulnerabilities. As a Solutions Architect, which of the following configuration you
+recommend to meet the stated security requirements?
+Option A Use AWS Shield to protect the application from large-scale DDoS attacks and AWS WAF to filter and monitor HTTP
+requests to prevent web application attacks.
+Option B Use AWS Shield to provide encryption for data at rest and in transit, and AWS WAF to monitor and log network traffic for
+compliance purposes.
+Option C Use AWS Shield to manage network traffic and routing, and AWS Secrets Manager to handle application layer security by
+blocking unauthorized access to AWS resources.
+Option D Use AWS Shield to provide DDoS protection for the application layer and AWS Secrets Manager to monitor and log network
+traffic for compliance purposes.
+Correct Answer a
+Question
+You are designing an architecture that can recover from a disaster very quickly with minimum down time to the end users. Which of
+the following approaches is best?
+Option A
+Leverage Route 53 health checks to automatically fail over to backup site when the primary site becomes unreachable
+Option B
+Implement the Pilot Light DR architecture so that traffic can be processed seamlessly in case the primary site becomes unreachable
+Option C
+Implement either Fully Working Low Capacity Standby or Multi-site Active-Active architecture so that the end users will not experience
+any delay even if the primary site becomes unreachable
+Option D
+Implement multi-region architecture to ensure high availability
+Correct Answer c
+Question
+A Solution Architect is designing a three-tier web application. The Architect wants to restrict access to the database tier to accept
+traffic from the application servers only. However, these application servers are in an Auto Scaling group and may vary in quantity.
+How should the Architect configure the database servers to meet the requirements?
+Option A
+Configure the database security group to allow database traffic from the application server IP addresses.
+Option B
+Configure the database security group to allow database traffic from the application server security group.
+Option C
+Configure the database subnet network ACL to deny all inbound non-database traffic from the application-tier subnet.
+Option D
+Configure the database subnet network ACL to allow inbound database traffic from the application-tier subnet.
+Correct Answer c
+Question An e-commerce company runs its web application on EC2 instances in an Auto Scaling group and uses an SQS queue to
+handle order processing. Despite using Auto Scaling, the application experiences performance degradation during peak order
+volumes. Which of the following strategies would effectively address the performance bottleneck and improve order processing
+efficiency?
+Option A Simple scaling policy based on a custom Amazon SQS queue metric.
+Option B Step scaling policy based on CPU utilization metric.
+Option C Target tracking scaling policy based on a custom Amazon SQS queue metric.
+Option D Predictive scaling based on historical data.
+Correct Answer c
+Question You are designing a web application that needs to be highly available and fault-tolerant, with the ability to withstand regionwide failures. The application will serve users globally and need to ensure data is available even if entire AWS region becomes
+unavailable. Which combination of AWS services and features should you utilize to achieve this goal?
+Option A Deploy the application across multiple Availability Zones within a single region using Amazon EC2 and Amazon RDS MultiAZ deployments, and use Amazon CloudFront for global content delivery.
+Option B Set up the application in multiple AWS regions using Amazon EC2 instances with Elastic Load Balancing and Auto Scaling,
+use Amazon Route 53 for DNS-based routing, and replicate your data with Amazon S3 Cross-Region Replication.
+Option C Deploy the application on AWS Lambda functions across multiple Availability Zones in a single region, use Amazon
+DynamoDB with on-demand capacity mode, and use Amazon CloudFront for caching static assets.
+Option D Use AWS Global Accelerator to route traffic across multiple VPCs within a single region, deploy your database on Amazon
+RDS with read replicas, and use AWS Backup to replicate data across regions.
+Correct Answer b
+Question A company's web application is deployed on EC2 instances and load balanced by an ALB. They want to limit access to
+users from a specific country. As a Solutions Architect of the company how will you restrict access to their EC2-based web app, load
+balanced by an ALB, to users from the designated country?
+Option A Configure the security group for the EC2 instances.
+Option B Configure the security group on the Application Load Balancer.
+Option C Configure AWS WAF on the Application Load Balancer in a VPC
+Option D Configure the network ACL for the subnet that contains the EC2 instances.
+Correct Answer c
+Question A financial institution needs to store and process large volumes of financial data in real-time for fraud detection and risk
+management. The data is stored as key-value pair and requires low latency access for fraud detection models. Additionally, the data
+needs to be retained for regulatory compliance and audit purposes. As a Solutions Architect which AWS database services would you
+recommend for this scenario, considering the need for low latency, high throughput, and data retention, especially for time series data
+and analytics?
+Option A Amazon Aurora for transactional data and Amazon S3 for data retention.
+Option B Amazon DynamoDB for transactional data and Amazon Redshift for data retention.
+Option C Amazon Aurora for transactional data and Amazon Timestream for time-series data and analytics.
+Option D Amazon DynamoDB for transactional data and Amazon Timestream for time-series data and analytics.
+Correct Answer d
+Question A company has an on-premises application that exports log files that range from 20 GB to 30 GB in size. A solutions
+architect has created an Amazon S3 bucket to store these files. The files will be uploaded directly from the application and due to
+intermittent failures in the network, at times, the upload fails. The solutions architect must design a solution that resolves this issue
+with minimal operational overhead. Which solution will meet these requirements?
+Option A Enable S3 Transfer Acceleration
+Option B Copy the files to an EC2 instance in the closest AWS region. Use S3 lifecycle policies to copy the log files to Amazon S3.
+Option C Use Multipart Upload to Amazon S3. Upload each of the object parts independently to minimize the impact of network
+failures
+Option D Upload the files to 2 AWS regions simultaneously. Enable two way cross-region replication between the two regions
+Correct Answer c
+Question
+A company needs to perform asynchronous processing, and has Amazon SQS as part of a decoupled architecture. The company
+wants to ensure that the number of empty responses from polling requests are kept to a minimum.
+What should a solutions architect do to ensure that empty responses are reduced?
+Option A
+Increase the maximum message retention period for the queue.
+Option B
+Increase the maximum receives for the redrive policy for the queue.
+Option C
+Increase the default visibility timeout for the queue.
+Option D
+Increase the receive message wait time for the queue.
+Correct Answer d
+Question
+You have configured a website www.abc.com and hosted it on WebLogic Server and you are using ELB with the EC2 instances for
+load balancing. Which of the following would you configure to ensure that the EC2 instances accept requests only from ELB?
+Option A
+Configure the security group of EC2, which allows access to the ELB source security group.
+Option B
+Configure the EC2 instance so that it only listens on the ELB port.
+Option C
+Configure the security group of EC2, which allows access only to the ELB listener.
+Option D
+Open the port for an ELB static IP in the EC2 security group.
+Correct Answer a
+Question
+A solutions architect wants to design a solution to save costs for Amazon EC2 instances that do not need to run during a 2-week
+company shutdown. The applications running on the instances store data in instance memory (RAM) that must be present when the
+instances resume operation. Which approach should the solutions architect recommend to shut down and resume the instances?
+Option A
+Modify the application to store the data on instance store volumes. Reattach the volumes while restarting them.
+Option B
+Snapshot the instances before stopping them. Restore the snapshot after restarting the instances.
+Option C
+Run the applications on instances enabled for hibernation. Hibernate the instances before the shutdown.
+Option D
+Note the Availability Zone for each instance before stopping it. Restart the instances in the same Availability Zones after the
+shutdown.
+Correct Answer c
+Question
+A call center application consists of a three-tier application using Auto Scaling groups to automatically scale resources as needed.
+Users report that every morning at 9:00 AM the system becomes very slow for about 15 minutes. A Solution Architect determines that
+a large percentage of the call center staff starts work at 9:00AM, so Auto Scaling does not have enough time to scale out to meet
+demand.
+How can the Architect fix the problem?
+Option A
+Change the Auto Scaling group's scale out event to scale based on network utilization.
+Option B
+Create an Auto Scaling scheduled action to scale out the necessary resources at 8:30 AM every morning.
+Option C
+Use Reserved Instances to ensure the system has reserved the right amount of capacity for the scale-up events.
+Option D
+Permanently keep a steady state of instances that is needed at 9:00 AM to guarantee available resources, but leverage Spot
+Instances.
+Correct Answer a
+Question A rapidly growing startup is seeking a cost-efficient platform to deploy and manage their microservices architecture. Attimes there is no traffic to the application and most of the times it experiences continuous traffic to the application workloads, they
+need a solution that can seamlessly scale to handle fluctuating workloads and to the application. Given these constraints, as a
+Solution architect what is the most cost-effective solution you recommend that aligns to the stated requirement?
+Option A Run the microservices on AWS Lambda behind an API gateway
+Option B Run the microservices as containers using Elastic Beanstalk
+Option C Run the microservices on Amazon ECS backed by EC2 instances
+Option D Run the microservices on EC2 instances
+Correct Answer a
+Question
+A user wants to analyze the streaming data using Kinesis Firehose. Which of the below storage service/services can be used in order
+to store the streaming data so that Splunk can be used in order to perform analysis? Choose 2 options.
+Option A
+AWS DynamoDB
+Option B
+Amazon RDS
+Option C
+Amazon S3
+Option D
+AWS RedShift
+Correct Answer cd
+Question As a Solutions Architect to a retail enterprise you want to create a hybrid cloud storage solution that provides on-premises
+access to data stored in AWS S3, with low latency for frequently accessed data. Which of the following AWS Storage Gateway type
+would be most suitable for providing low-latency access to frequently accessed data stored in S3?
+Option A Cached Volume
+Option B Stored Volume
+Option C File Gateway
+Option D Tape Gateway
+Correct Answer a
+Question An e-commerce startup leverages an Application Load Balancer (ALB) to distribute traffic across multiple microservices
+running on EC2 instances. To ensure requests reach the appropriate microservice based on the URL path, the development team
+needs a routing strategy. Which feature of the Application Load Balancer best addresses this requirement?
+Option A Path-based Routing
+Option B Query String Parameter-based Routing
+Option C HTTP Header-based Routing
+Option D Host-based Routing
+Correct Answer a
+Question
+A Solutions Architect has a multi-layer application running in Amazon VPC. The application has an ELB Classic Load Balancer as the
+front end in a public subnet, and an Amazon EC2-based reverse proxy that performs content-based routing to two backend Amazon
+EC2 instances hosted in a private subnet. The Architect sees tremendous traffic growth and is concerned that the reverse proxy and
+current backend set up will be insufficient.
+Which actions should the Architect take to achieve a cost-effective solution that ensures the application automatically scales to meet
+traffic demand? (Select two.)
+Option A
+Replace the Amazon EC2 reverse proxy with an ELB internal Classic Load Balancer.
+Option B
+Add Auto Scaling to the Amazon EC2 backend fleet.
+Option C
+Add Auto Scaling to the Amazon EC2 reverse proxy layer.
+Option D
+Use t2 burstable instance types for the backend fleet.
+Correct Answer ab
+Question
+A company plans to use AWS for all new batch processing workloads. The company's developers use Docker containers for the new
+batch processing. The system design must accommodate critical and non-critical batch processing workloads 24/7.
+How should a Solutions Architect design this architecture in a cost-efficient manner?
+Option A
+Purchase Reserved Instances to run all containers. Use Auto Scaling groups to schedule jobs.
+Option B
+Host a container management service on Spot Instances. Use Reserved Instances to run Docker containers.
+Option C
+Use Amazon ECS orchestration and Auto Scaling groups: one with Reserve Instances, one with Spot Instances.
+Option D
+Use Amazon ECS to manage container orchestration. Purchase Reserved Instances to run all batch workloads at the same time.
+Correct Answer c
+Question You have an EC2 instance running a web server (HTTP/HTTPS). The security group is configured to allow only necessary
+traffic? Which of the following best describes the purpose of an AWS security group?
+Option A To physically separate resources into different geographical regions for disaster recovery
+Option B To control the inbound and outbound traffic to AWS resources.
+Option C To physically separate resources into different availability zones using subnets
+Option D To provide a backup and recovery solution for AWS resources
+Correct Answer b
+Question Your company is developing a high-traffic e-commerce website that requires a database to handle millions of transactions
+per day. The database needs to be highly available, scalable, and performant to ensure a seamless shopping experience for
+customers.Which of the following is a benefit of using Amazon Aurora for a high-performance and secure database application?
+Option A Automatic failover
+Option B Built-in encryption
+Option C Serverless scaling
+Option D All of the provided options
+Correct Answer d
+Question An Shoe manufacturer has set up a Network Load balancer(NLB) for its web application. The users are complaining about
+the website downtime as the NLB is unable to detect application’s HTTP errors. How can the company automatically replace
+unhealthy EC2 instances without any custom development?
+Option A Use a cron job to monitor application logs and restart EC2 instances.
+Option B Switch to an Application Load Balancer with HTTP health checks and auto scaling.
+Option C Set up a CloudWatch alarm for NLB's UnhealthyHostCount and use auto scaling.
+Option D Configure HTTP health checks on the NLB and leverage auto scaling.
+Correct Answer b
+Question You are building a highly sensitive application on AWS that requires strict control over encryption key access. As a
+Solutions Architect, You should ensure that only authorized users can perform specific actions on encryption keys, such as
+generating, using and rotating keys. Which AWS service and feature should you primarily leverage to achieve this requirement?
+Option A AWS KMS with Key Rotation
+Option B AWS CloudTrail with Key Usage Monitoring
+Option C AWS IAM with Key Policies
+Option D AWS WAF with Key Protection Rules
+Correct Answer c
+Question
+A company runs a public-facing three-tier web application in a VPC across multiple Availability Zones. Amazon EC2 instances for the
+application tier running in private subnets need to download software patches from the internet. However, the instances cannot be
+directly accessible from the internet. Which actions should be taken to allow the instances to download the needed patches? (Select
+TWO.)
+Option A
+Configure a NAT gateway in a public subnet.
+Option B
+Define a custom route table with a route to the NAT gateway for internet traffic and associate it with the private subnets for the
+application tier.
+Option C
+Assign Elastic IP addresses to the application instances.
+Option D
+Define a custom route table with a route to the internet gateway for internet traffic and associate it with the private subnets for the
+application tier.
+Correct Answer ab
+Question
+When assessing an organization AWS use of AWS API access credentials which of the following three credentials should be
+evaluated? Choose 3 answers
+Option A
+Key pairs
+Option B
+Console passwords
+Option C
+Access keys
+Option D
+Signing certificates
+Correct Answer bcd
+Question
+Developers are creating a new online transaction processing (OLTP) application for a small database that is very read-write intensive.
+A single table in the database is updated continuously throughout the day, and the developers want to ensure that the database
+performance is consistent.
+Which Amazon EBS storage option will achieve the MOST consistent performance to help maintain application performance?
+Option A
+Provisioned IOPS SSD
+Option B
+General Purpose SSD
+Option C
+Cold HDD
+Option D
+Throughput Optimized HDD
+Correct Answer a
